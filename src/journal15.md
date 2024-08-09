@@ -1,4 +1,4 @@
-# Reading / Journal 15 TEST
+# Reading / Journal 15
 
 ## Wrap-Up ✏️
 

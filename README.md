@@ -1,1 +1,2 @@
-# cit144.pwoosley.codes
+# CIT144
+[open source teaching]

@@ -75,7 +75,7 @@ int x = 1;
 String y = "hello world";
 ```
 
-You can largely ignore specifying types in Python, so long as you manually keep track of them in your head and are careful about your logic. Newer versions of Python have added support for "type hinting" which helps external tools verify your logic. (Python itself is more than happy to attempt running logic with incorrect types.) You can read more about type hinting at <https://docs.python.org/3/library/typing.html>.
+You can largely ignore specifying types in Python, so long as you manually keep track of them in your head and are careful about your logic. Newer versions of Python have added support for "type hinting" which helps external tools verify your logic. (Python itself is more than happy to attempt running logic with incorrect types.) You can read more about type hinting at <https://docs.python.org/3/library/typing.html> or watch this video for an overview <https://youtu.be/79zeCq9raY0?si=s_TkWckJEBr82HQA>.
 
 **Now read Chapters 1 and 2** from our textbook
 

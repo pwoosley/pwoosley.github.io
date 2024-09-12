@@ -27,6 +27,7 @@ First, decide how you will run Python. (Options in Journal 1.)
 
 My preference is that you run everything for this class in Repl.it. To do this, visit [https://repl.it/](https://repl.it/) and sign up for a free account. Once you are logged in, visit [https://repl.it/new/python3](https://repl.it/new/python3) to create a new Python repl. Repl.it will automatically install any libraries for you that you might need.
 
+*** SKIP IF YOU USE REPLIT ***
 Alternatively, if you are running Python on your own computer, then you will need to install a few libraries. Do this by creating a file named `requirements.txt`, put the following in it...
 
 ```txt
@@ -43,6 +44,7 @@ pygubu==0.18.1
 python -m pip install -U pip
 pip install -r requirements.txt
 ```
+*** END OF SECTION IF NOT USING REPLIT ***
 
 Second, download the data that you will need for this Lab by right clicking this link, [lab1_data.csv](assets/lab1_data.csv), and saving the link as `lab1_data.csv`. Do NOT just click the link and open it in Excel/etc., as those tools can change the formatting of the data. (This was a very common cause of headaches in past semesters, so we're practicing it up front.)
 

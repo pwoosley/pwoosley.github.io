@@ -46,7 +46,7 @@ for chunk in chunks:
 
 print(found_urls[1:3])</code></pre><p>Embed another screenshot and check:</p><p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F27d48820-29f1-4809-91e5-7eb2ebfbf62e.image.png?v=1609698720020" alt="Instructor&#39;s storing URLs results"/></p><hr/><h3 id="Scraping-a-list-of-URLs..."><a class="docs-heading-anchor" href="#Scraping-a-list-of-URLs...">Scraping a list of URLs...</a><a id="Scraping-a-list-of-URLs...-1"></a><a class="docs-heading-anchor-permalink" href="#Scraping-a-list-of-URLs..." title="Permalink"></a></h3><p>Eleventh, you now know how to scrape one URL for specific values, and you now know how to chunk a single page and scrape those chunks so that you can get multiple values from one page. But we can scrape a <em>list</em> of URLs in a similar way, like if you have a list of reddit pages you want to get the comments from. Essentially, you wrap everything we&#39;ve done so far up in a for loop that loops over a list of URLs you care about.</p><p>Since we have a list of URLs we&#39;ve just scraped, let&#39;s load <em>those</em> pages&#39; data and scrape them too:</p><pre><code class="language-python hljs"># Loop through those URLs and scrape each for the date
 for url in found_urls:
-  html = get(url, headers=firefox_headers).text
+  html = get(url, headers=my_bot_headers).text
   pattern = &quot;&gt; This page was last edited on {day} {month} {year}, at {time}&lt;&quot;
   results = search(pattern, html)
   if results is not None:
@@ -71,7 +71,7 @@ data = DataFrame({
 
 # Loop through those URLs and scrape each for the date
 for url in set(found_urls):
-  html = get(url, headers=firefox_headers).text
+  html = get(url, headers=my_bot_headers).text
   pattern = &quot;&gt; This page was last edited on {day} {month} {year}, at {time}&lt;&quot;
   results = search(pattern, html)
   if results is not None:

@@ -2,7 +2,7 @@
   Collect only pages with nav_order and title.
   Remove duplicates by unique URLs.
 {% endcomment %}
-{% assign pages_with_nav = site.pages | where_exp: "p", "p.nav_order != nil and p.title" %}
+{% assign pages_with_nav = site.pages | where_exp: "p", "p.nav_order != nil" | where_exp: "p", "p.title" %}
 {% assign sorted_pages = pages_with_nav | sort: "nav_order" | uniq: "url" %}
 {% assign current_index = -1 %}
 

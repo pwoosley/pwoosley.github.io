@@ -1,6 +1,6 @@
 title: "CIT 144: Python I"
 description: "Course materials and journals for Python I"
-baseurl: "/"   # Leave empty "" if your site root is pwoosley.github.io
+baseurl: "/latest"   # Required for /latest/ subfolder
 url: "https://pwoosley.github.io"
 
 markdown: kramdown

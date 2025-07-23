@@ -226,54 +226,54 @@ pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load the imports we'll need
 ## We'll use pygubu to make an app
-</span><span class="kn">from</span> <span class="n">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
+</span><span class="kn">from</span> <span class="nn">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
 
 <span class="c1">## We'll use pandas to process data
-</span><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+</span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
 
 <span class="c1">## We'll use matplotlib to add plots to our app
-</span><span class="kn">from</span> <span class="n">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
-<span class="kn">from</span> <span class="n">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">Figure</span>
-<span class="kn">from</span> <span class="n">matplotlib.backends.backend_tkagg</span> <span class="kn">import</span> <span class="n">FigureCanvasTkAgg</span>
-<span class="n">rcParams</span><span class="p">.</span><span class="nf">update</span><span class="p">({</span><span class="sh">"</span><span class="s">figure.autolayout</span><span class="sh">"</span><span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
+</span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">Figure</span>
+<span class="kn">from</span> <span class="nn">matplotlib.backends.backend_tkagg</span> <span class="kn">import</span> <span class="n">FigureCanvasTkAgg</span>
+<span class="n">rcParams</span><span class="p">.</span><span class="n">update</span><span class="p">({</span><span class="s">"figure.autolayout"</span><span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
 
 <span class="c1"># Build our app
-</span><span class="n">app</span> <span class="o">=</span> <span class="nc">Builder</span><span class="p">()</span>
-<span class="n">app</span><span class="p">.</span><span class="nf">add_from_file</span><span class="p">(</span><span class="sh">"</span><span class="s">lab1_design.ui</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">window</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">canvas_frame</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="n">app</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">()</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_from_file</span><span class="p">(</span><span class="s">"lab1_design.ui"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="n">get_object</span><span class="p">(</span><span class="s">"window"</span><span class="p">)</span>
+<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="n">get_object</span><span class="p">(</span><span class="s">"canvas_frame"</span><span class="p">)</span>
 
 <span class="c1"># Load our data
-</span><span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab1_data.csv</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"lab1_data.csv"</span><span class="p">)</span>
 
 <span class="c1"># Add a plot into our app (no data yet)
-</span><span class="n">fig</span> <span class="o">=</span> <span class="nc">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># 4 in wide, 3 in tall
-</span><span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">()</span>
-<span class="n">canvas</span> <span class="o">=</span> <span class="nc">FigureCanvasTkAgg</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="n">canvas_frame</span><span class="p">)</span> 
-<span class="n">canvas</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
-<span class="n">canvas</span><span class="p">.</span><span class="nf">get_tk_widget</span><span class="p">().</span><span class="nf">pack</span><span class="p">()</span>
+</span><span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># 4 in wide, 3 in tall
+</span><span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">()</span>
+<span class="n">canvas</span> <span class="o">=</span> <span class="n">FigureCanvasTkAgg</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="n">canvas_frame</span><span class="p">)</span> 
+<span class="n">canvas</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">canvas</span><span class="p">.</span><span class="n">get_tk_widget</span><span class="p">().</span><span class="n">pack</span><span class="p">()</span>
 
 <span class="c1"># Add data to the plot
 ## Sum up and average the data by author
-</span><span class="n">author_sums</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">groupby</span><span class="p">([</span><span class="sh">"</span><span class="s">Author</span><span class="sh">"</span><span class="p">]).</span><span class="nf">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="n">author_sums</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">"Author"</span><span class="p">]).</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c1">## Plot the TEA averages with a horizontal bar chart
-</span><span class="n">author_sums</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span>
+</span><span class="n">author_sums</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span>
   <span class="n">ax</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="c1"># where to plot it
-</span>  <span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">barh</span><span class="sh">"</span><span class="p">,</span> <span class="c1"># what kind to plot
-</span>  <span class="n">y</span><span class="o">=</span><span class="sh">"</span><span class="s">TEA</span><span class="sh">"</span> <span class="c1"># what to plot
+</span>  <span class="n">kind</span><span class="o">=</span><span class="s">"barh"</span><span class="p">,</span> <span class="c1"># what kind to plot
+</span>  <span class="n">y</span><span class="o">=</span><span class="s">"TEA"</span> <span class="c1"># what to plot
 </span><span class="p">)</span>
 
 <span class="c1"># Just an example of adding an action to a button
 </span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">HI!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"HI!"</span><span class="p">)</span>
 
-<span class="n">app</span><span class="p">.</span><span class="nf">connect_callbacks</span><span class="p">({</span>
-  <span class="sh">"</span><span class="s">say_hello</span><span class="sh">"</span><span class="p">:</span> <span class="n">say_hello</span>
+<span class="n">app</span><span class="p">.</span><span class="n">connect_callbacks</span><span class="p">({</span>
+  <span class="s">"say_hello"</span><span class="p">:</span> <span class="n">say_hello</span>
 <span class="p">})</span>
 
 <span class="c1"># Our app is ready, let's go!
-</span><span class="n">window</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</span><span class="n">window</span><span class="p">.</span><span class="n">mainloop</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>You should see a window appear with a horizonal bar plot. The plot shows the percentage of paragraphs written by each of the three Bronte sisters that mention some form of “tea.” We can see that Emily mentions “tea” (as I defined it in my scraping logic) most frequently. I know that Charlotte mentioned tea the most, but she also wrote more than her sisters overall, so taking the average cancelled that out a bit.</p>
@@ -305,15 +305,15 @@ pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
 <p>Start a new python project on Repl.it with this code:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load...
-</span><span class="kn">from</span> <span class="n">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
+</span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
 
 <span class="c1"># Initialize...
-</span><span class="n">tim</span> <span class="o">=</span> <span class="nc">Turtle</span><span class="p">()</span>
+</span><span class="n">tim</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
 
 <span class="c1"># Draw!
-</span><span class="n">tim</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">tim</span><span class="p">.</span><span class="nf">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">tim</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</span><span class="n">tim</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">tim</span><span class="p">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">tim</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Add to and modify the code (trial and error) to make these shapes:</p>

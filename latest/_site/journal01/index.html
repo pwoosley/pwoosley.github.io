@@ -203,13 +203,13 @@
 <p>For example, this is incorrect and will cause an error:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is positive</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"x is positive"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>But this is perfect:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is positive</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"x is positive"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>It doesn’t matter if you use two spaces, four spaces, fourty-two spaces, or a press of the tab key as your indentation. What matters is that, whatever you choose, you are consistent. I personally prefer two spaces per indentation. So that’s two spaces for the first level of indent, then four, then six, …</p>
@@ -217,7 +217,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
   <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-      <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is an even number between 0 and 100 exclusive</span><span class="sh">"</span><span class="p">)</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"x is an even number between 0 and 100 exclusive"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>I also prefer that, after “coming down” from one or more levels of indentation, I leave a single blank line.</p>
@@ -225,9 +225,9 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
   <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-      <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is an even number between 0 and 100 exclusive</span><span class="sh">"</span><span class="p">)</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"x is an even number between 0 and 100 exclusive"</span><span class="p">)</span>
 
-<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">now we</span><span class="sh">'</span><span class="s">re done</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"now we're done"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>That is not required, but makes code more readable.</p>
@@ -237,9 +237,9 @@
 <p>This means that a variable can be a string one second, then changed to an integer later. This is a big contrast to languages like Java and C which use static typing (once something is a string it is always a string).</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is a number</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="sh">"</span><span class="s">hello world</span><span class="sh">"</span>
-<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is now a string</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"x is a number"</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s">"hello world"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"x is now a string"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Also notice that you don’t have to say what type a variable is when you make it. Contrast that to this in Java:</p>

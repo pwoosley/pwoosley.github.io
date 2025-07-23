@@ -211,9 +211,9 @@
   </li>
   <li>In your own words, as you understand it, what is a “data frame”? What is a “data structure” in general?</li>
   <li>What sort of output would be displayed by the following code? Be specific. (Note: I am not asking you to <em>run</em> this code with your machine, I am asking you to <em>interpret</em> it yourself by hand.)
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
-<span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">banking_data.csv</span><span class="sh">"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="nf">describe</span><span class="p">())</span>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"banking_data.csv"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">describe</span><span class="p">())</span>
 </code></pre></div>    </div>
   </li>
   <li>(Come back and answer this question after completing the rest of the assignment) What problems, if any, did you encounter at any point in this Lab? What did you do to overcome them?</li>
@@ -260,15 +260,15 @@ Heffalump  Harvey      632-79-9439  30.0    1.0    20.0   30.0  40.0
 
 <p>Fourth, start with this Python code (make sure your code and data file are next to each other):</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab2_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sh">"</span><span class="s">,</span><span class="sh">"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"lab2_data.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">","</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Notice the <code class="language-plaintext highlighter-rouge">sep=","</code> I have above. Make sure this matches EXACTLY the separator you noted in the previous step. Since I just have commas, I have <code class="language-plaintext highlighter-rouge">sep=","</code>, but you might need to put <code class="language-plaintext highlighter-rouge">sep=";"</code> (semicolon) or so on. If you have a space in your separator, then this alternative might give you a cleaner read:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab2_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sh">"</span><span class="s">,</span><span class="sh">"</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"lab2_data.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">","</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Embed a screenshot showing your code and your result. For example:</p>
@@ -283,9 +283,9 @@ Heffalump  Harvey      632-79-9439  30.0    1.0    20.0   30.0  40.0
 
 <p>Fifth, let’s get used to some DataFrame syntax:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">])</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>Note that <code class="language-plaintext highlighter-rouge">data.Test1</code> (capitalization matters!) gives us one <em>column</em> of our spreadsheet, the one named <code class="language-plaintext highlighter-rouge">Test1</code>. Next, <code class="language-plaintext highlighter-rouge">data.Test1 &gt; 40</code> creates a column of true/false values, corresponding with the students that scored more/at most 40 on their first test. And <code class="language-plaintext highlighter-rouge">data[data.Test1 &gt; 40]</code> selects the <em>rows</em> of <em>only</em> the students that scored more than 40 on that test.</p>
@@ -293,7 +293,7 @@ Heffalump  Harvey      632-79-9439  30.0    1.0    20.0   30.0  40.0
 <p>Sixth, we can use than to find the names of students who scored at least a certain score:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">high_on_test2</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">Test2</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">]</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">high_on_test2</span><span class="p">.</span><span class="n">First</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">high_on_test2</span><span class="p">.</span><span class="n">First</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Embed screenshots showing your code and results at this point.</p>
@@ -321,22 +321,22 @@ Heffalump  Harvey      632-79-9439  30.0    1.0    20.0   30.0  40.0
 <p>Start with this code:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load...
-</span><span class="kn">from</span> <span class="n">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
-<span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">random</span>
+</span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
 
 <span class="c1"># Initialize...
-</span><span class="n">tim</span> <span class="o">=</span> <span class="nc">Turtle</span><span class="p">()</span>
+</span><span class="n">tim</span> <span class="o">=</span> <span class="n">Turtle</span><span class="p">()</span>
 
 <span class="c1"># Loop...
-</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
 
   <span class="c1"># How to move...
 </span>  <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
-  <span class="n">angle</span> <span class="o">=</span> <span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">90</span>
+  <span class="n">angle</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">90</span>
 
   <span class="c1"># Move!
-</span>  <span class="n">tim</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-  <span class="n">tim</span><span class="p">.</span><span class="nf">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</span>  <span class="n">tim</span><span class="p">.</span><span class="n">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+  <span class="n">tim</span><span class="p">.</span><span class="n">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">random()</code> method returns a value between 0 (inclusive) and 1 (exclusive). So, <code class="language-plaintext highlighter-rouge">random() * 90</code> returns a value between 0 and 90. If you wanted to shift this, you could do something like <code class="language-plaintext highlighter-rouge">random() * 90 - 45</code>, which would return a value between -45 and 45. Etc.</p>

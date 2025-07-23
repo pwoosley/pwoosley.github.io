@@ -224,8 +224,8 @@ pygubu-designer
 
 <p>If you got an error message like <code class="language-plaintext highlighter-rouge">/usr/bin/env './python3': No such file or directory</code> when you tried to run <code class="language-plaintext highlighter-rouge">pygubu-designer</code>, try this instead. In your <code class="language-plaintext highlighter-rouge">main.py</code> write the following code and hit run:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pygubudesigner.main</span> <span class="kn">import</span> <span class="n">start_pygubu</span>
-<span class="nf">start_pygubu</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pygubudesigner.main</span> <span class="kn">import</span> <span class="n">start_pygubu</span>
+<span class="n">start_pygubu</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Fourth, in your Designer, under the Design/Container tab, click the TopLevel button once. Under the Object Properties pane on the right side, set the <code class="language-plaintext highlighter-rouge">id</code> value to <code class="language-plaintext highlighter-rouge">window</code>.</p>
@@ -249,16 +249,16 @@ pygubu-designer
 <p>Tenth, let’s load our GUI into python. Setup your <code class="language-plaintext highlighter-rouge">main.py</code> like so and press run:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Imports
-</span><span class="kn">from</span> <span class="n">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
+</span><span class="kn">from</span> <span class="nn">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
 
 <span class="c1"># Build our app
-</span><span class="n">app</span> <span class="o">=</span> <span class="nc">Builder</span><span class="p">()</span>
-<span class="n">app</span><span class="p">.</span><span class="nf">add_from_file</span><span class="p">(</span><span class="sh">"</span><span class="s">lab4_design.ui</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">window</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">canvas_frame</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="n">app</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">()</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_from_file</span><span class="p">(</span><span class="s">"lab4_design.ui"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="n">get_object</span><span class="p">(</span><span class="s">"window"</span><span class="p">)</span>
+<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="n">get_object</span><span class="p">(</span><span class="s">"canvas_frame"</span><span class="p">)</span>
 
 <span class="c1"># Our app is ready, let's go!
-</span><span class="n">window</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</span><span class="n">window</span><span class="p">.</span><span class="n">mainloop</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Embed screenshots showing your design running.</p>
@@ -266,39 +266,39 @@ pygubu-designer
 <p>Eleventh, let’s plot the data we downloaded earlier and embed that in our app too:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Imports
-</span><span class="kn">from</span> <span class="n">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
-<span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
-<span class="kn">from</span> <span class="n">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
-<span class="kn">from</span> <span class="n">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">Figure</span>
-<span class="kn">from</span> <span class="n">matplotlib.backends.backend_tkagg</span> <span class="kn">import</span> <span class="n">FigureCanvasTkAgg</span>
-<span class="n">rcParams</span><span class="p">.</span><span class="nf">update</span><span class="p">({</span><span class="sh">"</span><span class="s">figure.autolayout</span><span class="sh">"</span><span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
+</span><span class="kn">from</span> <span class="nn">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">Figure</span>
+<span class="kn">from</span> <span class="nn">matplotlib.backends.backend_tkagg</span> <span class="kn">import</span> <span class="n">FigureCanvasTkAgg</span>
+<span class="n">rcParams</span><span class="p">.</span><span class="n">update</span><span class="p">({</span><span class="s">"figure.autolayout"</span><span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
 
 <span class="c1"># Build our app
-</span><span class="n">app</span> <span class="o">=</span> <span class="nc">Builder</span><span class="p">()</span>
-<span class="n">app</span><span class="p">.</span><span class="nf">add_from_file</span><span class="p">(</span><span class="sh">"</span><span class="s">lab4_design.ui</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">window</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">canvas_frame</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="n">app</span> <span class="o">=</span> <span class="n">Builder</span><span class="p">()</span>
+<span class="n">app</span><span class="p">.</span><span class="n">add_from_file</span><span class="p">(</span><span class="s">"lab4_design.ui"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="n">get_object</span><span class="p">(</span><span class="s">"window"</span><span class="p">)</span>
+<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="n">get_object</span><span class="p">(</span><span class="s">"canvas_frame"</span><span class="p">)</span>
 
 <span class="c1"># Load data
-</span><span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab4_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sh">"</span><span class="s">;</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"lab4_data.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">";"</span><span class="p">)</span>
 
 <span class="c1"># Attach a matplotlib Figure to our GUI's canvas frame
-</span><span class="n">fig</span> <span class="o">=</span> <span class="nc">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># 4 in wide, 3 in tall
-</span><span class="n">canvas</span> <span class="o">=</span> <span class="nc">FigureCanvasTkAgg</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="n">canvas_frame</span><span class="p">)</span> 
-<span class="n">canvas</span><span class="p">.</span><span class="nf">get_tk_widget</span><span class="p">().</span><span class="nf">pack</span><span class="p">()</span>
+</span><span class="n">fig</span> <span class="o">=</span> <span class="n">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># 4 in wide, 3 in tall
+</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">FigureCanvasTkAgg</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="n">canvas_frame</span><span class="p">)</span> 
+<span class="n">canvas</span><span class="p">.</span><span class="n">get_tk_widget</span><span class="p">().</span><span class="n">pack</span><span class="p">()</span>
 
 <span class="c1"># Plot data in that figure
-</span><span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">()</span>
-<span class="n">data</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span>
+</span><span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">()</span>
+<span class="n">data</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span>
   <span class="n">ax</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
-  <span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">hist</span><span class="sh">"</span><span class="p">,</span>
-  <span class="n">y</span><span class="o">=</span><span class="sh">"</span><span class="s">balance</span><span class="sh">"</span>
+  <span class="n">kind</span><span class="o">=</span><span class="s">"hist"</span><span class="p">,</span>
+  <span class="n">y</span><span class="o">=</span><span class="s">"balance"</span>
 <span class="p">)</span>
 
-<span class="n">canvas</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+<span class="n">canvas</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="c1"># Our app is ready, let's go!
-</span><span class="n">window</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</span><span class="n">window</span><span class="p">.</span><span class="n">mainloop</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Embed screenshots.</p>
@@ -308,22 +308,22 @@ pygubu-designer
 <p>Fourteenth (skipping 13), back in your python code, add this right above your last line:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">click_all_clients</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">HI!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"HI!"</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">click_by_job</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">HI!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"HI!"</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">click_by_edu</span><span class="p">():</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">HI!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"HI!"</span><span class="p">)</span>
 
-<span class="n">app</span><span class="p">.</span><span class="nf">connect_callbacks</span><span class="p">({</span>
-  <span class="sh">"</span><span class="s">click_all_clients</span><span class="sh">"</span><span class="p">:</span> <span class="n">click_all_clients</span><span class="p">,</span>
-  <span class="sh">"</span><span class="s">click_by_job</span><span class="sh">"</span><span class="p">:</span> <span class="n">click_by_job</span><span class="p">,</span>
-  <span class="sh">"</span><span class="s">click_by_edu</span><span class="sh">"</span><span class="p">:</span> <span class="n">click_by_edu</span>
+<span class="n">app</span><span class="p">.</span><span class="n">connect_callbacks</span><span class="p">({</span>
+  <span class="s">"click_all_clients"</span><span class="p">:</span> <span class="n">click_all_clients</span><span class="p">,</span>
+  <span class="s">"click_by_job"</span><span class="p">:</span> <span class="n">click_by_job</span><span class="p">,</span>
+  <span class="s">"click_by_edu"</span><span class="p">:</span> <span class="n">click_by_edu</span>
 <span class="p">})</span>
 
 <span class="c1"># Our app is ready, let's go!
-</span><span class="n">window</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</span><span class="n">window</span><span class="p">.</span><span class="n">mainloop</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p>Run your code again and make sure when you click each button, the message “HI!” is displayed in your console in the bottom right of your repl.it screen.</p>
@@ -331,27 +331,27 @@ pygubu-designer
 <p>Fifteenth, let’s make the buttons do something more interesting. Replace the logic for the first two methods above with:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">click_all_clients</span><span class="p">():</span>
-  <span class="n">fig</span><span class="p">.</span><span class="nf">clf</span><span class="p">()</span> <span class="c1"># clear figure contents
-</span>  <span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">()</span>
-  <span class="n">data</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span> <span class="c1"># draw a plot
+  <span class="n">fig</span><span class="p">.</span><span class="n">clf</span><span class="p">()</span> <span class="c1"># clear figure contents
+</span>  <span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">()</span>
+  <span class="n">data</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span> <span class="c1"># draw a plot
 </span>    <span class="n">ax</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
-    <span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">hist</span><span class="sh">"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="sh">"</span><span class="s">balance</span><span class="sh">"</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s">"hist"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">"balance"</span>
   <span class="p">)</span>
 
-  <span class="n">canvas</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span> <span class="c1"># update app
+  <span class="n">canvas</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># update app
 </span>
 <span class="k">def</span> <span class="nf">click_by_job</span><span class="p">():</span>
-  <span class="n">fig</span><span class="p">.</span><span class="nf">clf</span><span class="p">()</span> <span class="c1"># clear figure contents
-</span>  <span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">()</span>
-  <span class="n">job_sums</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">groupby</span><span class="p">([</span><span class="sh">"</span><span class="s">job</span><span class="sh">"</span><span class="p">]).</span><span class="nf">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># average by job category
-</span>  <span class="n">job_sums</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span> <span class="c1"># draw a plot
+  <span class="n">fig</span><span class="p">.</span><span class="n">clf</span><span class="p">()</span> <span class="c1"># clear figure contents
+</span>  <span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="n">add_subplot</span><span class="p">()</span>
+  <span class="n">job_sums</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">"job"</span><span class="p">]).</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># average by job category
+</span>  <span class="n">job_sums</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span> <span class="c1"># draw a plot
 </span>    <span class="n">ax</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span>
-    <span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">barh</span><span class="sh">"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="sh">"</span><span class="s">balance</span><span class="sh">"</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s">"barh"</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">"balance"</span>
   <span class="p">)</span>
 
-  <span class="n">canvas</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span> <span class="c1"># update app
+  <span class="n">canvas</span><span class="p">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># update app
 </span></code></pre></div></div>
 
 <p>Run again, make sure you can click between All Clients and By Job, and embed screenshots of each.</p>
@@ -445,9 +445,9 @@ TCA
 
 <p><strong>How do I convert a string to a list, and back?</strong></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_string</span> <span class="o">=</span> <span class="sh">"</span><span class="s">hello</span><span class="sh">"</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
-<span class="n">my_string_again</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_string</span> <span class="o">=</span> <span class="s">"hello"</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+<span class="n">my_string_again</span> <span class="o">=</span> <span class="s">""</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p><strong>How do I show all possible orderings of a list?</strong></p>

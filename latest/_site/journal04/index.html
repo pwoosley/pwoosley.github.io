@@ -197,11 +197,11 @@
 <p>Second, when you chain if/else’s together, we use <code class="language-plaintext highlighter-rouge">elif</code> for the middle sections, an abbreviation of “else if”:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Let</span><span class="sh">'</span><span class="s">s get good grades!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Let's get good grades!"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Take good care of your skin!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Take good care of your skin!"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Dont</span><span class="sh">'</span><span class="s"> forget to file taxes!</span><span class="sh">"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Dont' forget to file taxes!"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Third, on a different topic, so far we’ve only talked about writing code in a single file.</p>
@@ -210,14 +210,14 @@
 
 <p>For example:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
 </code></pre></div></div>
 
 <p>This will load the <code class="language-plaintext highlighter-rouge">pandas</code> module then specifically grant your program access to the <code class="language-plaintext highlighter-rouge">read_csv</code> method that is defined in that module.</p>
 
 <p>You could alternatively do:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></div></div>
 
 <p>This will import <em>everything</em> from <code class="language-plaintext highlighter-rouge">pandas</code>, no matter what it is or what it is called.</p>
@@ -226,15 +226,15 @@
 
 <p>Doing the more explicit version will make you more deliberate in your coding, and it makes it easier to rename things if you want to load things from two different modules that would have the same name. For example, if you are writing a web scraper, you might do:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">parse</span> <span class="kn">import</span> <span class="n">search</span>
-<span class="kn">from</span> <span class="n">re</span> <span class="kn">import</span> <span class="n">search</span> <span class="k">as</span> <span class="n">regex</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">parse</span> <span class="kn">import</span> <span class="n">search</span>
+<span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="n">search</span> <span class="k">as</span> <span class="n">regex</span>
 </code></pre></div></div>
 
 <p>Here, we load <code class="language-plaintext highlighter-rouge">search</code> from <code class="language-plaintext highlighter-rouge">parse</code> and we also load <code class="language-plaintext highlighter-rouge">search</code> from <code class="language-plaintext highlighter-rouge">re</code>. But since those have the same name, we rename the second one to <code class="language-plaintext highlighter-rouge">regex</code> so we don’t <a href="https://en.wikipedia.org/wiki/Clobbering">clobber</a> the first name.</p>
 
 <p>You might also see syntax like this:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 </code></pre></div></div>
 
 <p>Here, we import everything from <code class="language-plaintext highlighter-rouge">pandas</code>, like <code class="language-plaintext highlighter-rouge">read_csv</code>, but we can only access them by prefixing like <code class="language-plaintext highlighter-rouge">pd.read_csv</code>. Still, I prefer the more deliberate <code class="language-plaintext highlighter-rouge">from pandas import read_csv</code> approach. As you will see though, every place you read about Python, authors have their own preferences they stick to, which is perfectly fine. Notice the preferences of others, be aware of your own preferences, and practice converting between the two as you learn from others while designing your own code.</p>

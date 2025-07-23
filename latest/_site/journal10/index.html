@@ -204,7 +204,7 @@
 
 <p>First example:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Eugene</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"Bob"</span><span class="p">,</span> <span class="s">"Cindy"</span><span class="p">,</span> <span class="s">"Alice"</span><span class="p">,</span> <span class="s">"Eugene"</span><span class="p">,</span> <span class="s">"Alice"</span><span class="p">]</span>
 <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">deleteByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
@@ -217,7 +217,7 @@
 </span>    <span class="n">indexToDelete</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
     
     <span class="c1"># loop through names
-</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
       
       <span class="c1"># when we find a match, write it down, break out of the for loop
 </span>      <span class="k">if</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
@@ -232,13 +232,13 @@
 </span>    <span class="c1"># then let the while loop continue, we might
 </span>    <span class="c1"># find something else
 </span>    <span class="k">else</span><span class="p">:</span>
-      <span class="n">names</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
-      <span class="n">ages</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+      <span class="n">names</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+      <span class="n">ages</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
 
 <span class="c1"># test a "before and after" to see if it worked
-</span><span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
-<span class="nf">deleteByName</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+</span><span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+<span class="n">deleteByName</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Does this code work? Yes. Run it for yourself, step through how it works, and convince yourself that it works before you read on.</p>
@@ -313,7 +313,7 @@
 
 <p>Second example:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Eugene</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"Bob"</span><span class="p">,</span> <span class="s">"Cindy"</span><span class="p">,</span> <span class="s">"Alice"</span><span class="p">,</span> <span class="s">"Eugene"</span><span class="p">,</span> <span class="s">"Alice"</span><span class="p">]</span>
 <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">deleteByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
@@ -324,11 +324,11 @@
 </span>  <span class="n">indicesToDelete</span> <span class="o">=</span> <span class="p">[]</span>
 
   <span class="c1"># loop through names
-</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
 
     <span class="c1"># when we find a match, write it down, then keep looking
 </span>    <span class="k">if</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
-      <span class="n">indicesToDelete</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+      <span class="n">indicesToDelete</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
   <span class="c1"># while we have things to delete,
 </span>  <span class="c1"># delete them. NOTE: pop() pulls
@@ -339,15 +339,15 @@
 </span>  <span class="c1"># the indices of all the values
 </span>  <span class="c1"># will change, so they won't align
 </span>  <span class="c1"># with the list we jotted down anymore
-</span>  <span class="k">while</span> <span class="nf">len</span><span class="p">(</span><span class="n">indicesToDelete</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">indexToDelete</span> <span class="o">=</span> <span class="n">indicesToDelete</span><span class="p">.</span><span class="nf">pop</span><span class="p">()</span>
-    <span class="n">names</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
-    <span class="n">ages</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+</span>  <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">indicesToDelete</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">indexToDelete</span> <span class="o">=</span> <span class="n">indicesToDelete</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+    <span class="n">names</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+    <span class="n">ages</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
 
 <span class="c1"># test a "before and after" to see if it worked
-</span><span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
-<span class="nf">deleteByName</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+</span><span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+<span class="n">deleteByName</span><span class="p">(</span><span class="s">"Alice"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Does this code work? Yes. Run it for yourself, step through how it works, and convince yourself that it works before you read on.</p>

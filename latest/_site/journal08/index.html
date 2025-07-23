@@ -213,7 +213,7 @@
 
 <p>We can use “paired lists”, aka, “parallel arrays”:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Denise</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Eugene</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Frankie</span><span class="sh">"</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Alice"</span><span class="p">,</span> <span class="s">"Bob"</span><span class="p">,</span> <span class="s">"Cindy"</span><span class="p">,</span> <span class="s">"Denise"</span><span class="p">,</span> <span class="s">"Eugene"</span><span class="p">,</span> <span class="s">"Frankie"</span><span class="p">]</span>
 <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
 </code></pre></div></div>
 
@@ -222,9 +222,9 @@
 <p>But it is <em>possible</em> that the lists could get out of order with each other or one has one more item than the other. If you are a careful programmer you can prevent that. But if you want to be <em>sure</em> that the names and ages stay paired, you can use a dictionary instead of a list.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-  <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-  <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">:</span> <span class="mi">27</span>
+  <span class="s">"Alice"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="s">"Bob"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="s">"Cindy"</span><span class="p">:</span> <span class="mi">27</span>
   <span class="c1"># etc
 </span><span class="p">}</span>
 </code></pre></div></div>

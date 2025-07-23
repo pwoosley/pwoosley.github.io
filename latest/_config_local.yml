@@ -1,0 +1,19 @@
+title: "CIT 144: Python I"
+description: "Course materials and journals for Python I"
+baseurl: "/"   # Required for local installation with "bundle exec jekyll serve --config _config.yml,_config_local.yml"
+url: "https://pwoosley.github.io"
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Build settings
+theme: null
+plugins:
+  - jekyll-feed

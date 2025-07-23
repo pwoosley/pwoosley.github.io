@@ -221,10 +221,10 @@
 <p>First, start with this Python and make sure you can get it to run without error, as a check that you have all the necessary libraries installed:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load what we need for web scraping
-</span><span class="kn">from</span> <span class="n">requests</span> <span class="kn">import</span> <span class="n">get</span>
-<span class="kn">from</span> <span class="n">parse</span> <span class="kn">import</span> <span class="n">search</span>
-<span class="kn">from</span> <span class="n">time</span> <span class="kn">import</span> <span class="n">sleep</span>
-<span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+</span><span class="kn">from</span> <span class="nn">requests</span> <span class="kn">import</span> <span class="n">get</span>
+<span class="kn">from</span> <span class="nn">parse</span> <span class="kn">import</span> <span class="n">search</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
 </code></pre></div></div>
 
 <p>Second, add this to the bottom and run again (be sure to edit the strings inside the <code class="language-plaintext highlighter-rouge">my_boy_headers</code> to match your own name! Include your name, the word “bot”, a version number, and the url to this assignment):</p>
@@ -232,16 +232,16 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># HTTP header settings
 # We'll use these in a bit to help keep our scraper from getting blocked
 </span><span class="n">my_bot_headers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="sh">'</span><span class="s">User-Agent</span><span class="sh">'</span><span class="p">:</span>
-    <span class="sh">'</span><span class="s">Mozilla/5.0 (compatible; MariahKnowlesBot/1.0; +https://cit144.knowles.codes/lab3)</span><span class="sh">'</span>
+  <span class="s">'User-Agent'</span><span class="p">:</span>
+    <span class="s">'Mozilla/5.0 (compatible; MariahKnowlesBot/1.0; +https://cit144.knowles.codes/lab3)'</span>
 <span class="p">}</span>
 
 <span class="c1"># Download a webpage so we can scrape from its HTML
-</span><span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://en.wikipedia.org/wiki/Catherine,_Duchess_of_Cambridge</span><span class="sh">"</span>
-<span class="n">html</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">my_bot_headers</span><span class="p">).</span><span class="n">text</span>
+</span><span class="n">url</span> <span class="o">=</span> <span class="s">"https://en.wikipedia.org/wiki/Catherine,_Duchess_of_Cambridge"</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">my_bot_headers</span><span class="p">).</span><span class="n">text</span>
 
 <span class="c1"># Check that it worked
-</span><span class="nf">print</span><span class="p">(</span><span class="n">html</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">200</span><span class="p">])</span>
+</span><span class="k">print</span><span class="p">(</span><span class="n">html</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">200</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>Embed a screenshot and check that you are getting <em>similar</em> results to mine:</p>
@@ -271,16 +271,16 @@
 <p>Sixth, scrape those values from the page using:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A pattern to search for
-</span><span class="n">pattern</span> <span class="o">=</span> <span class="sh">"</span><span class="s">&gt; This page was last edited on {day} {month} {year}, at {time}&lt;</span><span class="sh">"</span>
+</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">"&gt; This page was last edited on {day} {month} {year}, at {time}&lt;"</span>
 
 <span class="c1"># Do the search
-</span><span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+</span><span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
 
 <span class="c1"># Display the results
-</span><span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">day</span><span class="sh">"</span><span class="p">])</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">month</span><span class="sh">"</span><span class="p">])</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">year</span><span class="sh">"</span><span class="p">])</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">time</span><span class="sh">"</span><span class="p">])</span>
+</span><span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s">"day"</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s">"month"</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s">"year"</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s">"time"</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>Embed another screenshot and check against my results again:</p>
@@ -308,10 +308,10 @@
 <p>Since the links always end with <code class="language-plaintext highlighter-rouge">/a&gt;</code>, I think splitting on that would be a good idea. That way, each “chunk” should contain exactly one link.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Split into chunks
-</span><span class="n">chunks</span> <span class="o">=</span> <span class="n">html</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s">/a&gt;</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="n">chunks</span> <span class="o">=</span> <span class="n">html</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">"/a&gt;"</span><span class="p">)</span>
 
 <span class="c1"># Check that it worked
-</span><span class="nf">print</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</span><span class="k">print</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>Embed another screenshot and check against my results again:</p>
@@ -321,13 +321,13 @@
 <p>Ninth, loop through the chunks and attempt to scrape URLs that match our pattern from above:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our search pattern
-</span><span class="n">pattern</span> <span class="o">=</span> <span class="sh">'</span><span class="s">href=</span><span class="sh">"</span><span class="s">/wiki/{wiki_link}</span><span class="sh">"</span><span class="s"> title=</span><span class="sh">"</span><span class="s">{hover_title}</span><span class="sh">"</span><span class="s">&gt;{link_text}&lt;</span><span class="sh">'</span>
+</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">'href="/wiki/{wiki_link}" title="{hover_title}"&gt;{link_text}&lt;'</span>
 
 <span class="c1"># Loop through the chunks and try to get a URL from each
 </span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
-  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">wiki_link</span><span class="sh">"</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="s">"wiki_link"</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>Note the <code class="language-plaintext highlighter-rouge">if results is not None</code> there so we ignore the cases where a chunk does not have a valid link we care about.</p>
@@ -337,12 +337,12 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Loop through the chunks and try to get a URL from each
 </span><span class="n">found_urls</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
-  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-    <span class="n">wiki_link</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">wiki_link</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">found_urls</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="sh">"</span><span class="s">https://en.wikipedia.org/wiki/</span><span class="sh">"</span> <span class="o">+</span> <span class="n">wiki_link</span><span class="p">)</span>
+    <span class="n">wiki_link</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"wiki_link"</span><span class="p">]</span>
+    <span class="n">found_urls</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"https://en.wikipedia.org/wiki/"</span> <span class="o">+</span> <span class="n">wiki_link</span><span class="p">)</span>
 
-<span class="nf">print</span><span class="p">(</span><span class="n">found_urls</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">found_urls</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></div>
 
 <p>Embed another screenshot and check:</p>
@@ -359,20 +359,20 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Loop through those URLs and scrape each for the date
 </span><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">found_urls</span><span class="p">:</span>
-  <span class="n">html</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">firefox_headers</span><span class="p">).</span><span class="n">text</span>
-  <span class="n">pattern</span> <span class="o">=</span> <span class="sh">"</span><span class="s">&gt; This page was last edited on {day} {month} {year}, at {time}&lt;</span><span class="sh">"</span>
-  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+  <span class="n">html</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">firefox_headers</span><span class="p">).</span><span class="n">text</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="s">"&gt; This page was last edited on {day} {month} {year}, at {time}&lt;"</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-    <span class="n">day</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">day</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">month</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">month</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">year</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">year</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">time</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">time</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"day"</span><span class="p">]</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"month"</span><span class="p">]</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"year"</span><span class="p">]</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"time"</span><span class="p">]</span>
 
-    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The URL </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s"> was last updated on </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s">.</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The URL </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s"> was last updated on </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
 
   <span class="c1"># Pause for a second before scraping again.
 </span>  <span class="c1"># This helps us from getting blocked
-</span>  <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span>  <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Here’s my partial results, embed another screenshot and check:</p>
@@ -385,8 +385,8 @@
 
 <p>But it’s also slow because some links go to the same place, so we end up duplicating a lot of work. To fix that “duplicate link” problem, you can do this for your for loop instead:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nf">set</span><span class="p">(</span><span class="n">found_urls</span><span class="p">):</span>
-  <span class="bp">...</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">found_urls</span><span class="p">):</span>
+  <span class="p">...</span>
 </code></pre></div></div>
 
 <p>It’ll still be slow (there’s a lot of links in that list!), but it’ll be a tad better.</p>
@@ -400,26 +400,26 @@
 <p>Modify your last for loop to be:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create an empty DataFrame, before the loop
-</span><span class="n">data</span> <span class="o">=</span> <span class="nc">DataFrame</span><span class="p">({</span>
-  <span class="sh">"</span><span class="s">URL</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="sh">"</span><span class="s">Day</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="sh">"</span><span class="s">Month</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="sh">"</span><span class="s">Year</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="sh">"</span><span class="s">Time</span><span class="sh">"</span><span class="p">:</span> <span class="p">[]</span>
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">({</span>
+  <span class="s">"URL"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s">"Day"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s">"Month"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s">"Year"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s">"Time"</span><span class="p">:</span> <span class="p">[]</span>
 <span class="p">})</span>
 
 <span class="c1"># Loop through those URLs and scrape each for the date
-</span><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nf">set</span><span class="p">(</span><span class="n">found_urls</span><span class="p">):</span>
-  <span class="n">html</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">firefox_headers</span><span class="p">).</span><span class="n">text</span>
-  <span class="n">pattern</span> <span class="o">=</span> <span class="sh">"</span><span class="s">&gt; This page was last edited on {day} {month} {year}, at {time}&lt;</span><span class="sh">"</span>
-  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+</span><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">found_urls</span><span class="p">):</span>
+  <span class="n">html</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">firefox_headers</span><span class="p">).</span><span class="n">text</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="s">"&gt; This page was last edited on {day} {month} {year}, at {time}&lt;"</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-    <span class="n">day</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">day</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">month</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">month</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">year</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">year</span><span class="sh">"</span><span class="p">]</span>
-    <span class="n">time</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">time</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"day"</span><span class="p">]</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"month"</span><span class="p">]</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"year"</span><span class="p">]</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s">"time"</span><span class="p">]</span>
 
-    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The URL </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s"> was last updated on </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s">.</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The URL </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s"> was last updated on </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
     
     <span class="c1"># Add this one result to the data frame, inside the loop
 </span>    <span class="c1"># (I personally hate this syntax for appending one row to a dataframe,
@@ -430,20 +430,20 @@
 </span>    <span class="c1"># syntax data.loc[data.shape[0]] to access the part of the dataframe
 </span>    <span class="c1"># just past the end of the current last row, then put the new row there.)
 </span>    <span class="n">row</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="sh">"</span><span class="s">URL</span><span class="sh">"</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
-      <span class="sh">"</span><span class="s">Day</span><span class="sh">"</span><span class="p">:</span> <span class="n">day</span><span class="p">,</span>
-      <span class="sh">"</span><span class="s">Month</span><span class="sh">"</span><span class="p">:</span> <span class="n">month</span><span class="p">,</span>
-      <span class="sh">"</span><span class="s">Year</span><span class="sh">"</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
-      <span class="sh">"</span><span class="s">Time</span><span class="sh">"</span><span class="p">:</span> <span class="n">time</span>
+      <span class="s">"URL"</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
+      <span class="s">"Day"</span><span class="p">:</span> <span class="n">day</span><span class="p">,</span>
+      <span class="s">"Month"</span><span class="p">:</span> <span class="n">month</span><span class="p">,</span>
+      <span class="s">"Year"</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+      <span class="s">"Time"</span><span class="p">:</span> <span class="n">time</span>
     <span class="p">}</span>
     <span class="n">data</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span>
 
   <span class="c1"># Pause for a second before scraping again.
 </span>  <span class="c1"># This helps us from getting blocked
-</span>  <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span>  <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Save the data for later, after the loop
-</span><span class="n">data</span><span class="p">.</span><span class="nf">to_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab3_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</span><span class="n">data</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"lab3_data.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>This adds three things: before the loop, create an empty DataFrame; during the loop, add each result to the DataFrame; after the loop, save the data to a file.</p>
@@ -468,59 +468,59 @@
 
 <p>Start a new python project on Repl.it with this code:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">drawSvg</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">drawSvg</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># A Drawing is like, part canvas, part list of shapes to
 # be drawn on that canvas. (0, 0) will be the dead center
 # of the image
-</span><span class="n">d</span> <span class="o">=</span> <span class="nc">Drawing</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="sh">'</span><span class="s">center</span><span class="sh">'</span><span class="p">)</span>
+</span><span class="n">d</span> <span class="o">=</span> <span class="n">Drawing</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s">'center'</span><span class="p">)</span>
 
 <span class="c1"># Make an irregular polygon shape
-</span><span class="n">myLines</span> <span class="o">=</span> <span class="nc">Lines</span><span class="p">(</span>
+</span><span class="n">myLines</span> <span class="o">=</span> <span class="n">Lines</span><span class="p">(</span>
   <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="c1"># first x/y coordinate
 </span>  <span class="mi">70</span><span class="p">,</span> <span class="o">-</span><span class="mi">49</span><span class="p">,</span> <span class="c1"># second x/y
 </span>  <span class="mi">95</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="c1"># ...
 </span>  <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span>
   <span class="n">close</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="c1"># other settings
-</span>  <span class="n">fill</span><span class="o">=</span><span class="sh">'</span><span class="s">#eeee00</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">stroke</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span>
+</span>  <span class="n">fill</span><span class="o">=</span><span class="s">'#eeee00'</span><span class="p">,</span>
+  <span class="n">stroke</span><span class="o">=</span><span class="s">'black'</span>
 <span class="p">)</span>
 
 <span class="c1"># Add the shape to the canvas
-</span><span class="n">d</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">myLines</span><span class="p">)</span>
+</span><span class="n">d</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">myLines</span><span class="p">)</span>
 
 <span class="c1"># Draw a rectangle
-</span><span class="n">r</span> <span class="o">=</span> <span class="nc">Rectangle</span><span class="p">(</span>
+</span><span class="n">r</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span>
       <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="c1"># x/y position
 </span>      <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="c1"># width and height
-</span>      <span class="n">fill</span><span class="o">=</span><span class="sh">'</span><span class="s">#1248ff</span><span class="sh">'</span>
+</span>      <span class="n">fill</span><span class="o">=</span><span class="s">'#1248ff'</span>
 <span class="p">)</span>
 
 <span class="c1"># Don't forget to add it to the canvas
-</span><span class="n">d</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span><span class="n">d</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 
 <span class="c1"># Draw many circles by using a loop
-</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-  <span class="n">c</span> <span class="o">=</span> <span class="nc">Circle</span><span class="p">(</span>
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="n">c</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span>
     <span class="o">-</span><span class="mi">40</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># x/y position
 </span>    <span class="mi">30</span><span class="p">,</span> <span class="c1"># radius
-</span>    <span class="n">fill</span><span class="o">=</span><span class="sh">'</span><span class="s">red</span><span class="sh">'</span><span class="p">,</span>
+</span>    <span class="n">fill</span><span class="o">=</span><span class="s">'red'</span><span class="p">,</span>
     <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-    <span class="n">stroke</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="s">'black'</span>
   <span class="p">)</span>
 
-  <span class="n">d</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+  <span class="n">d</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
 <span class="c1"># For a LOT more examples, see
 # https://github.com/cduck/drawSvg
 </span>
 <span class="c1"># Render the drawing to an SVG and a PNG so we can view it
-</span><span class="n">d</span><span class="p">.</span><span class="nf">setRenderSize</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span> 
-<span class="n">d</span><span class="p">.</span><span class="nf">saveSvg</span><span class="p">(</span><span class="sh">'</span><span class="s">example.svg</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">d</span><span class="p">.</span><span class="nf">savePng</span><span class="p">(</span><span class="sh">'</span><span class="s">example.png</span><span class="sh">'</span><span class="p">)</span>
+</span><span class="n">d</span><span class="p">.</span><span class="n">setRenderSize</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span> 
+<span class="n">d</span><span class="p">.</span><span class="n">saveSvg</span><span class="p">(</span><span class="s">'example.svg'</span><span class="p">)</span>
+<span class="n">d</span><span class="p">.</span><span class="n">savePng</span><span class="p">(</span><span class="s">'example.png'</span><span class="p">)</span>
 
 <span class="c1"># A friendly message
-</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Done!</span><span class="sh">"</span><span class="p">)</span>
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Done!"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Hit Run then view the <code class="language-plaintext highlighter-rouge">example.png</code> and <code class="language-plaintext highlighter-rouge">example.svg</code> images that it generates for you. You should see a doodle like this:</p>
@@ -575,12 +575,12 @@
 
 <p>In that case, we might write:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span><span class="p">,</span> <span class="n">merge</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span><span class="p">,</span> <span class="n">merge</span>
 
-<span class="n">data_first</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">my_first_file.csv</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">data_second</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">my_second_file.csv</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">data_first</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"my_first_file.csv"</span><span class="p">)</span>
+<span class="n">data_second</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s">"my_second_file.csv"</span><span class="p">)</span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="nf">merge</span><span class="p">(</span><span class="n">data_first</span><span class="p">,</span> <span class="n">data_second</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="sh">"</span><span class="s">ID</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">data_first</span><span class="p">,</span> <span class="n">data_second</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s">"ID"</span><span class="p">)</span>
 </code></pre></div></div>
 
 

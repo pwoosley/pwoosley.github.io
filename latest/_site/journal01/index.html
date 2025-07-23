@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 01 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-1">Reading / Journal 1</h1>
+
+<h2 id="up-and-running-️">Up and Running ✏️</h2>
+
+<p>Journals are a combination of a few things. First, the “journal.” This is a very small weekly assignment where you write 200+ words (option 1) or submit  “tinker” code (option 2). Second, the “reading.” This is where I direct you to work though your zyBook, an online article, or watch a video, and I supplement those with my own lecture notes, graphs, figures, quotes, or so on.</p>
+
+<p>All other assignments and lectures build upon these. Usually, there will be more reading at the start of a unit and less at the end.</p>
+
+<h3 id="reading">Reading</h3>
+
+<p>This first unit will be mostly review of CIT 120, and depending on what you covered in your 120, this may be more review for some than others.</p>
+
+<p>First, how do you run Python?</p>
+
+<p>One option is online, in your browser. I recommend <a href="https://repl.it/">https://repl.it/</a>, since it’s free (requires a free account) and it auto-saves like a Google Doc. There are limitations, but if you hit them in our class, I’ll give you a work around. If you don’t have a strong preference in how you run Python, go with this one.</p>
+
+<p>Another option is running Python on your own computer. If you are on Linux or Mac, then Python should already be installed by default. If you are on Windows, then you can install Python from <a href="http://python.org/">http://python.org/</a>. If you need a text editor, I recommend either the IDLE program that comes with Python (on Windows) or the Visual Studio Code (VSC) editor from <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. (See also the Python in VSC tutorial at <a href="https://code.visualstudio.com/docs/languages/python">https://code.visualstudio.com/docs/languages/python</a>.)</p>
+
+<p>Second, Python uses indentation religiously.</p>
+
+<p>While good indentation is a good idea in other languages, it is <em>required</em> in Python, and you have to get it <em>perfect</em>. Good news though, text editors do a good job of helping you out there.</p>
+
+<p>For example, this is incorrect and will cause an error:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is positive</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>But this is perfect:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is positive</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>It doesn’t matter if you use two spaces, four spaces, fourty-two spaces, or a press of the tab key as your indentation. What matters is that, whatever you choose, you are consistent. I personally prefer two spaces per indentation. So that’s two spaces for the first level of indent, then four, then six, …</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is an even number between 0 and 100 exclusive</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>I also prefer that, after “coming down” from one or more levels of indentation, I leave a single blank line.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is an even number between 0 and 100 exclusive</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">now we</span><span class="sh">'</span><span class="s">re done</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>That is not required, but makes code more readable.</p>
+
+<p>Finally for today, Python uses dynamic typing.</p>
+
+<p>This means that a variable can be a string one second, then changed to an integer later. This is a big contrast to languages like Java and C which use static typing (once something is a string it is always a string).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is a number</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="sh">"</span><span class="s">hello world</span><span class="sh">"</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">x is now a string</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Also notice that you don’t have to say what type a variable is when you make it. Contrast that to this in Java:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Inside the main</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">y</span> <span class="o">=</span> <span class="s">"hello world"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>You can largely ignore specifying types in Python, so long as you manually keep track of them in your head and are careful about your logic. Newer versions of Python have added support for “type hinting” which helps external tools verify your logic. (Python itself is more than happy to attempt running logic with incorrect types.) You can read more about type hinting at <a href="https://docs.python.org/3/library/typing.html">https://docs.python.org/3/library/typing.html</a> or watch this video for an overview <a href="https://youtu.be/79zeCq9raY0?si=s_TkWckJEBr82HQA">https://youtu.be/79zeCq9raY0?si=s_TkWckJEBr82HQA</a>.</p>
+
+<p><strong>Now from BlackBoard</strong> goto <strong><em>zyBooks Wk 1 assignment</em></strong></p>
+
+<h3 id="journal">Journal</h3>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>Share a personal achievement or milestone you reached recently, no matter how big or small. <a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">(Credit)</a></em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 2 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="lab-2-unedited">Lab 2 (UNEDITED)</h1>
+
+<h2 id="dataframes-and-logic-">DataFrames and Logic 🧑‍🔬</h2>
+
+<p>Labs provide hands-on experience with course material. They have three parts: review questions, guided exercise, open-ended exercise.</p>
+
+<p>The first few Labs provide practice with fundamentals, and the later Labs go hand-in-hand with the term project check-ins.</p>
+
+<p>Tips are at the very bottom. You should read them.</p>
+
+<h2 id="part-13-review-questions">Part 1/3: Review Questions</h2>
+
+<ol>
+  <li>You want to find the sine, cosine, square root, floor, or ceiling of a value. What module do you need to import?</li>
+  <li>What’s the use of the <code class="language-plaintext highlighter-rouge">dir</code> and <code class="language-plaintext highlighter-rouge">help</code> functions in Python, according to the book? (in your own words)</li>
+  <li>What is the value of the following expressions in Python? What data type does each value have?
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">1 + 1</code></li>
+      <li><code class="language-plaintext highlighter-rouge">1.0 + 1.0</code></li>
+      <li><code class="language-plaintext highlighter-rouge">"1"</code></li>
+      <li><code class="language-plaintext highlighter-rouge">"hello".upper()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">"Happy Birthday!".lower()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">"Hello {0}. I've been waiting for you {0}. Your {1} is getting cold, {0}.".format("Bob", "Soup")</code></li>
+      <li><code class="language-plaintext highlighter-rouge">True or False</code></li>
+      <li><code class="language-plaintext highlighter-rouge">True and False</code></li>
+      <li><code class="language-plaintext highlighter-rouge">not (True or False)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">not (True and False)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">not True or not False</code></li>
+      <li><code class="language-plaintext highlighter-rouge">not True and not False</code></li>
+    </ul>
+  </li>
+  <li>In your own words, as you understand it, what is a “data frame”? What is a “data structure” in general?</li>
+  <li>What sort of output would be displayed by the following code? Be specific. (Note: I am not asking you to <em>run</em> this code with your machine, I am asking you to <em>interpret</em> it yourself by hand.)
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">banking_data.csv</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="nf">describe</span><span class="p">())</span>
+</code></pre></div>    </div>
+  </li>
+  <li>(Come back and answer this question after completing the rest of the assignment) What problems, if any, did you encounter at any point in this Lab? What did you do to overcome them?</li>
+</ol>
+
+<h2 id="part-23-guided-exercise">Part 2/3: Guided Exercise</h2>
+
+<p>An <em>extremely</em> useful data structure in Python, no matter your use of it, is the <code class="language-plaintext highlighter-rouge">DataFrame</code> object from <code class="language-plaintext highlighter-rouge">pandas</code>. This is like a spreadsheet or 2D array with a lot of useful tools built in. We’ll practice using these this Lab.</p>
+
+<p>First, create a spreadsheet in your preferred tool, like Excel, Google Sheets, etc. Fill it with these contents:</p>
+
+<pre><code class="language-txt">Last       First       SSN          Test1  Test2  Test3  Test4  Final
+Alfalfa    Aloysius    123-45-6789  40.0   90.0   100.0   83.0  49.0
+Alfred     University  123-12-1234  41.0   97.0    96.0   97.0  48.0
+Gerty      Gramma      567-89-0123  41.0   80.0    60.0   40.0  44.0
+Android    Electric    087-65-4321  42.0   23.0    36.0   45.0  47.0
+Bumpkin    Fred        456-78-9012  43.0   78.0    88.0   77.0  45.0
+Rubble     Betty       234-56-7890  44.0   90.0    80.0   90.0  46.0
+Noshow     Cecil       345-67-8901  45.0   11.0    -1.0    4.0  43.0
+Buff       Bif         632-79-9939  46.0   20.0    30.0   40.0  50.0
+Airpump    Andrew      223-45-6789  49.0    1.0    90.0  100.0  83.0
+Backus     Jim         143-12-1234  48.0    1.0    97.0   96.0  97.0
+Carnivore  Art         565-89-0123  44.0    1.0    80.0   60.0  40.0
+Dandy      Jim         087-75-4321  47.0    1.0    23.0   36.0  45.0
+Elephant   Ima         456-71-9012  45.0    1.0    78.0   88.0  77.0
+Franklin   Benny       234-56-2890  50.0    1.0    90.0   80.0  90.0
+George     Boy         345-67-3901  40.0    1.0    11.0   -1.0   4.0
+Heffalump  Harvey      632-79-9439  30.0    1.0    20.0   30.0  40.0
+</code></pre>
+
+<p>(This is fake data.)</p>
+
+<p>Second, export your data to a CSV format. Usually this is an option under “File / Save As” or similar, depending on the tool you’re using. Save it as <code class="language-plaintext highlighter-rouge">lab2_data.csv</code>.</p>
+
+<p>Third, open your <code class="language-plaintext highlighter-rouge">.csv</code> file with your preferred text editor. If you’ve been using Repl.it, you can upload it to a new project then open the file there.</p>
+
+<p>For example, I see this when I open mine in Caret:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F26b8ac79-f0b3-45a5-8d8a-5cc7b4eaf02d.image.png?v=1609689788122" alt="CSV in Text Editor example" /></p>
+
+<p>(My screenshot is a tad old, so I have a Grade column in my screenshots that you won’t, just ignore that bit.)</p>
+
+<p>Yours may look formatted differently. That’s fine. The point is to notice how your values are separated. Is it with a semicolon? A tab character? A comma (like in mine)? A comma-space? A semicolon-space? etc.</p>
+
+<p>Fourth, start with this Python code (make sure your code and data file are next to each other):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab2_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sh">"</span><span class="s">,</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Notice the <code class="language-plaintext highlighter-rouge">sep=","</code> I have above. Make sure this matches EXACTLY the separator you noted in the previous step. Since I just have commas, I have <code class="language-plaintext highlighter-rouge">sep=","</code>, but you might need to put <code class="language-plaintext highlighter-rouge">sep=";"</code> (semicolon) or so on. If you have a space in your separator, then this alternative might give you a cleaner read:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab2_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sh">"</span><span class="s">,</span><span class="sh">"</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Embed a screenshot showing your code and your result. For example:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F700651bf-5bd6-46c2-8ac2-e81220aa26f0.image.png?v=1609690123056" alt="Loading data example" /></p>
+
+<p>If your <code class="language-plaintext highlighter-rouge">sep</code> was not set properly, then you’ll get results like this:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F5a48242a-21c1-4cf5-8af3-bc9e3b2e273b.image.png?v=1609690196571" alt="Loading data wrong sep BAD example" /></p>
+
+<p>You want nice and neatly separated values like my first screenshot, not a mushed together mess like my second screenshot. That shows us that pandas was able to read our values in and separate them correctly.</p>
+
+<p>Fifth, let’s get used to some DataFrame syntax:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">Test1</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">data.Test1</code> (capitalization matters!) gives us one <em>column</em> of our spreadsheet, the one named <code class="language-plaintext highlighter-rouge">Test1</code>. Next, <code class="language-plaintext highlighter-rouge">data.Test1 &gt; 40</code> creates a column of true/false values, corresponding with the students that scored more/at most 40 on their first test. And <code class="language-plaintext highlighter-rouge">data[data.Test1 &gt; 40]</code> selects the <em>rows</em> of <em>only</em> the students that scored more than 40 on that test.</p>
+
+<p>Sixth, we can use than to find the names of students who scored at least a certain score:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">high_on_test2</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">Test2</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">high_on_test2</span><span class="p">.</span><span class="n">First</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Embed screenshots showing your code and results at this point.</p>
+
+<p>Here’s the results I get:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2Ff9648147-2bfa-4c28-a899-b721bb992b19.image.png?v=1609690937254" alt="Instructor's high on test2 results" /></p>
+
+<p>Finally, write code (less is better!) that will select and display:</p>
+
+<ul>
+  <li>The Last name of students who scored less than 80 on Test 3</li>
+  <li>The SSN of students who scored less than 50 on the Final</li>
+  <li>The First name of students who scored more than 80 on Test 4 AND less than 50 on the Final (there are a few ways to go about this one)</li>
+</ul>
+
+<p>Show screenshots of your code and results for each.</p>
+
+<h2 id="optional-fun-exercise">Optional Fun Exercise</h2>
+
+<p>This is completely optional, not worth extra credit or anything, just a fun warm up. I do encourage you to, as you best see fit, try basing a few Tinker journals on these optional exercises though.</p>
+
+<p>We haven’t covered loops yet, but that’s okay.</p>
+
+<p>Start with this code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load...
+</span><span class="kn">from</span> <span class="n">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
+<span class="kn">from</span> <span class="n">random</span> <span class="kn">import</span> <span class="n">random</span>
+
+<span class="c1"># Initialize...
+</span><span class="n">tim</span> <span class="o">=</span> <span class="nc">Turtle</span><span class="p">()</span>
+
+<span class="c1"># Loop...
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+
+  <span class="c1"># How to move...
+</span>  <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span>
+  <span class="n">angle</span> <span class="o">=</span> <span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">90</span>
+
+  <span class="c1"># Move!
+</span>  <span class="n">tim</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+  <span class="n">tim</span><span class="p">.</span><span class="nf">right</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">random()</code> method returns a value between 0 (inclusive) and 1 (exclusive). So, <code class="language-plaintext highlighter-rouge">random() * 90</code> returns a value between 0 and 90. If you wanted to shift this, you could do something like <code class="language-plaintext highlighter-rouge">random() * 90 - 45</code>, which would return a value between -45 and 45. Etc.</p>
+
+<p>Update your “drunk turtle” logic to show the types of patterns we get when we do:</p>
+
+<ul>
+  <li>angle is between -45 and 45</li>
+  <li>angle is between 0 and 180</li>
+  <li>angle is between 0 and 360</li>
+  <li>angle is always 10, but size is between 0 and 20</li>
+  <li>anything else you want to test!</li>
+</ul>
+
+<p>Can you explain why those random settings tend to produce those sort of shapes?</p>
+
+<p>Whenver you’re done*, embed screenshots showing me your art!</p>
+
+<p>* “When is art done? When the check clears.”</p>
+
+<h2 id="part-33-open-ended-exercise">Part 3/3: Open-Ended Exercise</h2>
+
+<p>Write a simple program that will ask the user to enter three integers, <code class="language-plaintext highlighter-rouge">A</code>, <code class="language-plaintext highlighter-rouge">B</code>, and <code class="language-plaintext highlighter-rouge">C</code>. Then, it should use if/elif/else’s to determine which of these three values is in the <em>middle</em> of the other two. Finally, it should display a message like “The middle value was {value here}.”</p>
+
+<p>For example, if I enter 1, 5, and 10, it should display “The middle value was 5,” no matter what order I enter those values.</p>
+
+<p>Embed screenshots of your code and results, showing that it works in all of these cases:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">A</code> is the middle</li>
+  <li><code class="language-plaintext highlighter-rouge">B</code> is the middle</li>
+  <li><code class="language-plaintext highlighter-rouge">C</code> is the middle</li>
+  <li>All three values are the same</li>
+  <li>Some values are negative</li>
+  <li>Some values are exactly zero</li>
+  <li>Some values are very large</li>
+</ul>
+
+<h2 id="submission">Submission</h2>
+
+<p>Complete Parts 1, 2, and 3 in a single Word/etc. document, then submit your document as a Word or PDF file (NOT a .pages file) to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Each Lab is worth 6/100 towards your final grade.</p>
+
+<p>6/6 - Great job, maximum points! The student completes the Lab accurately and sufficiently and honestly, demonstrating the best of their ability.</p>
+
+<p>3/6 - Student completes most but not all of the Lab. Or, student completes the Lab, but only to the minimal letter of the prompt, not actually applying the concepts of the unit. If you encounter problems or have questions, be sure to email me well before 24 hours before the due date, then continue to attempt to resolve the issue on your own while you wait for a reply.</p>
+
+<p>1/6 - Student completes less than half of the Lab with sufficient work, or student leaves entire sections blank. Make sure that you are leaving yourself enough time to complete assignments, as usually students submit incomplete work because they were rushed at the last minute.</p>
+
+<p>0/6 - Student does not submit on time or submits plagiarized or unacceptable work. Double check that you have submitted the right file, as usually students get zeros because they submitted a previous week’s work by accident.</p>
+
+<h2 id="tips">Tips</h2>
+
+<p><strong>How do I tell which number is in the middle?</strong></p>
+
+<p>Think of this as TWO logical statements.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">B</code> is between <code class="language-plaintext highlighter-rouge">A</code> and <code class="language-plaintext highlighter-rouge">C</code>, then two simpler statements are true: <code class="language-plaintext highlighter-rouge">A</code> is less than <code class="language-plaintext highlighter-rouge">B</code> AND <code class="language-plaintext highlighter-rouge">B</code> is less than <code class="language-plaintext highlighter-rouge">C</code>.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

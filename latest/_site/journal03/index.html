@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 03 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-3">Reading / Journal 3</h1>
+
+<h2 id="strings-and-io-️">Strings and IO ✏️</h2>
+
+<h2 id="reading">Reading</h2>
+
+<p>So far we’ve seen numeric variables.</p>
+
+<p>Python has a lot of power with processing string variables, ie, variables containing text data like names and email addresses.</p>
+
+<p>Unlike other languages, you can use single or double quotes for strings in Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="sh">"</span><span class="s">hello</span><span class="sh">"</span>
+<span class="n">y</span> <span class="o">=</span> <span class="sh">'</span><span class="s">hello</span><span class="sh">'</span>
+</code></pre></div></div>
+
+<p>You can also use “triple” quotes for longer strings that span multiple lines:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="sh">"""</span><span class="s">
+There was no possibility of taking a walk that day.  We had been
+wandering, indeed, in the leafless shrubbery an hour in the morning; but
+since dinner (Mrs. Reed, when there was no company, dined early) the cold
+winter wind had brought with it clouds so sombre, and a rain so
+penetrating, that further out-door exercise was now out of the question.
+</span><span class="sh">"""</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="sh">'''</span><span class="s">
+I was glad of it: I never liked long walks, especially on chilly
+afternoons: dreadful to me was the coming home in the raw twilight, with
+nipped fingers and toes, and a heart saddened by the chidings of Bessie,
+the nurse, and humbled by the consciousness of my physical inferiority to
+Eliza, John, and Georgiana Reed.
+</span><span class="sh">'''</span>
+</code></pre></div></div>
+
+<p>This means that unlike Java and C, Python does not have a way to represent variables that contain a single character. To do that, just use a string that <em>happens</em> to have only a single character.</p>
+
+<p>Next, Python has a <em>long</em> list of built-in string functions. These are useful in the many situations you may find yourself in when your program needs to process text-based data that was entered by a user, scraped from the web, or so on.</p>
+
+<p>There is no guanrantee that text data found “in the wild” will be “clean,” ie, free of weirdness like empty space at the beginning, end, or stray ch]aracters in the mid;dle of words. You might also want to divide a longer string (an entire book) into a list of strings (the paragraphs) so that you can analyze them individially and find patterns as we progress through the story.</p>
+
+<p>So, the built-in string functions Python has are intended to give you quick solutions for those common concerns.</p>
+
+<p><strong>Now read “Python String Methods”</strong> from <a href="https://www.w3schools.com/python/python_ref_string.asp">https://www.w3schools.com/python/python_ref_string.asp</a></p>
+
+<p><strong>Now from BlackBoard</strong> goto <strong><em>zyBooks Wk 3 assignment</em></strong></p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>Reflect on a relationship in your life that has evolved or strengthened over time. (<a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">Credit</a>)</em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

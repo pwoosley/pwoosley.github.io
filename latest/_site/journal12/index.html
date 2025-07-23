@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 12 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-12">Reading / Journal 12</h1>
+
+<h2 id="getting-visual-️">Getting Visual ✏️</h2>
+
+<h2 id="reading">Reading</h2>
+
+<p>In Labs 4 and 5 we visualize data.</p>
+
+<p>A good visual will do two things, no more, no less:</p>
+
+<ul>
+  <li>Show <em>that</em> there is a pattern in the data</li>
+  <li>Show <em>what</em> that pattern is</li>
+</ul>
+
+<p>Statistics can do the first, and qualitative methods (“looking at” the data) can do the second.</p>
+
+<p>But a good visual–it can do both.</p>
+
+<p>This visual represents the conversations students had in the first and second version of an educational game:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F3edb48a2-591f-44b5-9ff1-949a5bd97d51.image.png?v=1603029394582" alt="" /></p>
+
+<p>The red and blue dots are the individual students, red representing those playing the new version, blue the old version. The red and blue squares are the “means” of those two groups, and the dashed-line-box around the squares is the “confidence interval” of those means. Because the boxes don’t overlap, we have good evidence that the two groups really did differ (<em>that</em> there is an effect from the updates of the game).</p>
+
+<p>So what do the positions of the dots mean? What do the red and blue lines mean?</p>
+
+<p>Those represent the <em>connections</em> students made as they talked to each other during game play. Students in the first game appear to connect Technical Constraints with Collaboration more frequently. In other words, they were asking each other, “what are we supposed to be doing?”</p>
+
+<p>Students in the second game appear to connect Design Reasoning with Performance Parameters. In other words, they were doing the work of engineers, which the game was supposed to teach them.</p>
+
+<hr />
+
+<p>That was a bit of a complicated visual, since what it is supposed to represent is complicated: how people talk about things.</p>
+
+<p>This visual from <a href="https://www.pewresearch.org/internet/2018/11/16/public-attitudes-toward-computer-algorithms/">Pew Research</a> is simpler:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F55b8d368-e8e0-4728-a17f-806a858389e2.image.png?v=1603029854661" alt="" /></p>
+
+<p>It shows how frequently different age groups, on average, report seeing content online that makes them feel a certain way.</p>
+
+<p>I’m not convinced that there <em>is</em> a relationship between age and any particular feeling: The pattern appears to me to be that older people report seeing <em>everything</em> less frequently.</p>
+
+<hr />
+
+<p>Next, consider this one:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2Ffbbceef9-f416-4a62-8a46-33053b8781ac.image.png?v=1603030023451" alt="" /></p>
+
+<p>I really like this one. As you may know, I research AI Ethics. But also, it shows the overall for/against a particular use of AI, while also showing <em>why</em> we see those differences. It gives us the big picture number and goes a little further into what’s what: and good balance of Quant and Qual, which I always appreciate.</p>
+
+<hr />
+
+<p>Last example, a <a href="https://mode.com/blog/violin-plot-examples/">violin plot</a>:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F9d079c89-f4b4-4506-9c79-510a834afefe.image.png?v=1603030218182" alt="" /></p>
+
+<p>This shows us that chicks fed on sunflower-based feed were, on average, heavier than those fed soybean-based feed. However, it <em>also</em> shows the distribution of those groups: We can see that <em>some</em> soybean-chickens were heavier than <em>some</em> sunflower-chickens, but we can still see trend is clear for <em>most</em> of the chicks.</p>
+
+<hr />
+
+<p>No matter the particular visual you go with, it always comes down to <em>units</em>, <em>groups</em>, and <em>measures</em>. (“Units” is short for “unit of analysis,” not “units” like feet/inches/pounds/etc.)</p>
+
+<p>In the educational game example, the units are the individual students. They are grouped by which version of the game they played. The measures are the counts we tracked for how often they connected certain concepts.</p>
+
+<p>In the first Pew example, the units are all the respondents to the survey. They are grouped by age. The measures are the frequency they report seeing content that evokes each emotion.</p>
+
+<p>In the second Pew example, the units are again all the respondents. They are not grouped here. The measures are their yes/no answer to the question about a particular use of AI, and the category they picked for why they picked that yes/no. (You can actually see that some respondents appeared to pick the wrong yes/no on accident, based on the “why” answer they gave.)</p>
+
+<p>And in the last example, the units are the individual chicks. They are grouped by what kind of feed we gave them. The measure is their weight.</p>
+
+<p>The reason we pick different plots in those cases boils down to either: we are working with different <em>types</em> of data, like numerical, categorical, etc.; we want to <em>show</em> different types of relationships, like comparisons, flows, etc.; or both.</p>
+
+<p><strong>Now watch “Understanding GroupBy Operation”</strong> from <a href="https://www.youtube.com/watch?v=fujPIABgUD0">https://www.youtube.com/watch?v=fujPIABgUD0</a></p>
+
+<p><strong>And read the “Grouping” section from “10 minutes to pandas”</strong> <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html</a></p>
+
+<p><strong>And familiarize yourself with “The Data Visualization Catalog”</strong> from <a href="https://datavizcatalogue.com/search.html">https://datavizcatalogue.com/search.html</a></p>
+
+<p><strong>And read “Why scientists need to be better at data visualization”</strong> from <a href="https://knowablemagazine.org/article/mind/2019/science-data-visualization">https://knowablemagazine.org/article/mind/2019/science-data-visualization</a></p>
+
+<p><strong>And (optional) skim the first five “Data Visualization” tutorials</strong> from <a href="https://www.kaggle.com/learn/data-visualization">https://www.kaggle.com/learn/data-visualization</a></p>
+
+<p><strong>Now from BlackBoard</strong> goto <strong><em>zyBooks Wk 11 assignment</em></strong></p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>Reflect on your educational journey. What’s something you learned outside a standard curriculum that’s been invaluable? (<a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">Credit</a>)</em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

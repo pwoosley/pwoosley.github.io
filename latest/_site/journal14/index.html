@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 14 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-14">Reading / Journal 14</h1>
+
+<h2 id="the-software-development-life-cycle-️">The Software Development Life Cycle ✏️</h2>
+
+<h2 id="reading">Reading</h2>
+
+<p>Some students have about software engineering. In CIT 143 (C# I), this topic is spread out over the entire semester. That’s because the very structure of C# itself is inspired by software development ideas. And while these ideas are <em>present</em> in Python, they are not so <em>required</em>. This is a longer reading than usual, since I’m summing up a lot in one place. Assume all of the linked readings are “optional,” but do read through my lecture notes, read what you can of the links, and bookmark the rest.</p>
+
+<p>So, to get started, let’s take a step back.</p>
+
+<hr />
+
+<p>Often in intro to programming courses we talk about “complexity” and how some new feature we’re teaching you–we promise–will help you manage and/or achieve more complex programs better.</p>
+
+<p>But what <em>is</em> a “complex” program? Is complexity a <em>good thing</em> to have?</p>
+
+<p>It seems easy to say that there is “good complexity” and “bad complexity.” Skyrim is good because its complexity allows for about <a href="https://howlongtobeat.com/game?id=9859">225 hours of gameplay</a>. But Skyrim is bad because with all that complexity comes some at times <em>very</em> frustrating <a href="https://www.ign.com/wikis/the-elder-scrolls-5-skyrim/Bugs_and_Glitches">bugs</a>, such as being unable to complete one of your favorite side missions because a necessary NPC failed to spawn and the only fix is starting a new save file.</p>
+
+<p>The line between “good complexity” and “bad complexity” isn’t something that we can leave to math. It’s something that’s nonlinear. It’s hard to predict. It’s subjective. And it’s often measured in <em>human</em> terms.</p>
+
+<p>So let’s think about “more vs. less” complexity instead. And, let’s take Bob Erickson’s advice. Erickson says to think about where we are now (zero complexity, since we haven’t started even thinking about our app yet) and where we want to be (the perfect app with the ideal levels and types of complexity that makes all our users happy). Our job as a software engineer, then, is to take a good route from here to there. No more, no less.</p>
+
+<hr />
+
+<p>Besides, or alongside, complexity, it’s also important to think about “success” and what “success” might mean for your project.</p>
+
+<ul>
+  <li>What does “success” mean for the project you’ll make in this course?</li>
+  <li>What does it mean if you were to keep working on that app in the real world?</li>
+  <li>Who are your customers?</li>
+  <li>Who are your co-workers?</li>
+  <li>Are there any third-parties that you might work with?</li>
+  <li>What role will groupwork play in the final design?</li>
+  <li>What role will communication channels play?</li>
+  <li>project milestones?</li>
+  <li>measures of progress?</li>
+  <li>shared ideas in your team of what’s “valuable”?</li>
+  <li>and so on?</li>
+</ul>
+
+<p>“Success,” to return to Erickon’s advice, is a certain kind of <em>journey</em>, not a certain kind of destination, and there’s a <em>lot</em> of people, things, and data involved in that process. (As Jenn Schiffer says, “You never (learn to) code alone.”)</p>
+
+<p>So, most importantly, in all of those questions above, and all the questions you ask yourself about programming, you should ask: <em>What do you want <strong>your</strong> role to be?</em></p>
+
+<hr />
+
+<p>A phrase often used is the “complexity point.” This phrase comes from Mark Rosewater, the head designer of Magic the Gathering. I want to share this excerpt from one of his <a href="http://dtwtranscripts.blogspot.com/2014/06/62014-episode-133-designing-commons.html">Drive to Work podcasts</a>:</p>
+
+<blockquote>
+  <p>… Our goal here is to minimize just how complex [the game] is. Not to make it not complex. It is impossible to make Magic not complex. It’s complex.</p>
+
+  <p>And part of doing that is, you need some breathers. You need to concentrate your complexity where it matters. And the way I like to think about it is, imagine that you have points for your complexity. And you had a limit. You only get so many complexity points. Well, every time you make a common card you have to add, you have to say, “How many complexity points are on this card, and is it worth it? Do I need this to be?”</p>
+
+  <p>And the reality is, I need some creatures. Common creatures. I mean, I’m not saying that all of them are vanilla or [simple] and such. You need to have a lot of simple stuff like that, only because you need to allow your brain to be able to focus.</p>
+
+  <p>Because what happens is, if you give your brain too much, instead of being able to focus, it kind of just blurs things out. And what will happen is, when we do focus testing and watch people playing Magic, and even more experienced players, watching Magic, that if you get past the overload point, once your brain can’t handle it all, your brain just like dulls out and goes, “Okay…” and you kind of don’t think about things. And what we want to do is we want people to be able to spend the time and energy to think about things, so it’s a matter of focusing your complexity.</p>
+
+  <p>And once again, a big part of design is saying, “There’s a cost that comes with making what I’m making, do I want to spend that cost?” And one of which is complexity. That’s a big one, which is, “This is complex. How complex?”</p>
+
+  <p>And the way I think of it, I always use the term “complexity points,” and people think we have a system, where we have actual points. We don’t. It’s just easier to think of it this way, which is if I’m looking at a file, and I have three cards at common let’s say, that I know are all sort of causing a certain amount of mental strain on my player. I might have to say to myself, “Where do I want the mental strain?” It’s not that I don’t want to have some mentally taxing cards, but I want to be careful that the mentally taxing cards are what contribute to making it fun. …</p>
+</blockquote>
+
+<p>Magic the Gathering has a lot of <a href="https://arxiv.org/abs/1904.09828">metaphors useful for Computer Science</a>, and its rule system was in part inspired by theoretical computer science.</p>
+
+<p>The takeaway from this exerpt for us today is: Where do you want to invest your mental efforts?</p>
+
+<p>You could be making a large project, with several subcomponents, and several classes, and several methods. Practice and reading will help you think about  how to <em>break down</em> large projects into separable parts and about the ways those subcomponents/etc. <em>connect</em> to one another.</p>
+
+<p>But, individually, as you reflect on things, which subcomponent/etc. do you want to <em>invest complex effort</em> in? It’s not that you don’t want to have any parts that are hard to make, but you should want to be careful that the parts that are hard to make are what contribute to making your project fun.</p>
+
+<hr />
+
+<p>Keep in mind, <em>just</em> breaking your large program down into pieces is not the end goal. You <em>also</em> need to be conscious of how those pieces will fit together into a coherent whole. And the general pattern of how your project “fits together” is what we mean when we say “architecture” in software development.</p>
+
+<p>There are several common architectures out there software developers have come up with. Even if no two houses look exactly the same, the general idea of Foundation, Walls, and a Roof is pretty consistent. And one <em>very</em> common architecture is <strong>MVC</strong>, or Model, View, and Controller.</p>
+
+<p>The <strong>Model</strong> is the layer or component that deals with data. The <strong>View</strong> is the layer or component that deals with displaying information to and collecting information from the user. And the <strong>Controller</strong> is the layer that deals with the “business logic,” like taking money out of bank accounts or adding fun filters to a photo before we store it for the long term.</p>
+
+<p>(We actually used a simple form of MVC in Lab 1 and Lab 4! Our Model was specified by the first line of our CSV file, our View we created with Pygubu Designer and saved as a .ui file, and our Controller was the logic we attached to it with Python.)</p>
+
+<p><strong>Now read the Systems Architecture slides</strong> from <a href="http://web.mit.edu/6.976/www/notes/Notes1.pdf">http://web.mit.edu/6.976/www/notes/Notes1.pdf</a></p>
+
+<p><strong>And read “An MVC Primer”</strong> from <a href="https://danielmiessler.com/study/mvc/">https://danielmiessler.com/study/mvc/</a></p>
+
+<p><strong>And read “Javascript MVC”</strong> from <a href="https://alistapart.com/article/javascript-mvc/">https://alistapart.com/article/javascript-mvc/</a> (Yes, it’s about Javascript, so skip over the code examples, but the discussion of what each component is in charge of is <em>very</em> related to what we’re aiming at in this course.)</p>
+
+<p><strong>And read “MVC vs. MVVM”</strong> from <a href="https://hackernoon.com/mvc-vs-mvvm-how-a-website-communicates-with-its-data-models-18553877bf7d">https://hackernoon.com/mvc-vs-mvvm-how-a-website-communicates-with-its-data-models-18553877bf7d</a> (Again, the examples are in Javascript, but the discussion is close to home, and it gives a little contrast to an architecture we <em>won’t</em> be going into much detail in this course yet is still good for you to know the acronym for.)</p>
+
+<hr />
+
+<p>Now consider, <em>no matter what you do</em>, your architecture will not be perfect. Programs are not “one and done.” The <em>evolve</em> over time.</p>
+
+<p>But just like architectures, there are many different ways programmers have come up with for thinking out, and managing, that “evolution process.”</p>
+
+<p>This process is what we mean when we say “software development life cycle,” or SDLC.</p>
+
+<p>So, say you’ve planned your large project, you’ve broken it into subcomponents, you’ve decided what architecture to use to fit those pieces together, and you’ve coded and tested it. Are you done? Well, that’s never a simple question. What is art done? (“When the check clears.”)</p>
+
+<p>One way to think about “done” is the “waterfall” way. It’s called a waterfall because you can’t go back up. The first step is understanding the requirements, then planning the code, then writing the code. When you’re done, you’re done.</p>
+
+<p>And because you know that once you move on to the next step you can’t go back, you make <em>sure</em> that you got things right the first time around. That’s the driving force behind this Life Cycle, the first of two that we’ll learn today.</p>
+
+<p><strong>Now read “Waterfall Model”</strong> from <a href="https://airbrake.io/blog/sdlc/waterfall-model">https://airbrake.io/blog/sdlc/waterfall-model</a></p>
+
+<p><strong>And read “The Traditional Waterfall Approach”</strong> from <a href="https://www.umsl.edu/~hugheyd/is6840/waterfall.html">https://www.umsl.edu/~hugheyd/is6840/waterfall.html</a></p>
+
+<p>Next, the Cyclic approach to software development takes the idea of “rapid prototyping” and puts it front and center: <em>sooooo</em> often when working with a client, even <em>they</em> don’t know what they are asking you for until you’ve already built something they can look at and test.</p>
+
+<p>So, why not make the client part of the design process too?</p>
+
+<p>In the readings below, you’ll see this idea play out under the labels “spiral,” “agile,” and “scrum.”</p>
+
+<p><strong>Now read “6 Basic SDLC Methodologies: Which One is Best?”</strong> from <a href="https://www.roberthalf.com/blog/salaries-and-skills/6-basic-sdlc-methodologies-which-one-is-best">https://www.roberthalf.com/blog/salaries-and-skills/6-basic-sdlc-methodologies-which-one-is-best</a></p>
+
+<p><strong>And read “Software Development Life Cycle Models and Methodologies”</strong> from <a href="https://melsatar.blog/2012/03/15/software-development-life-cycle-models-and-methodologies/">https://melsatar.blog/2012/03/15/software-development-life-cycle-models-and-methodologies/</a></p>
+
+<p><strong>And read “The Beginner’s Guide To Scrum And Agile Project Management”</strong> from <a href="https://blog.trello.com/beginners-guide-scrum-and-agile-project-management">https://blog.trello.com/beginners-guide-scrum-and-agile-project-management</a></p>
+
+<p>And finally, we know that both Waterfall and Cyclic approaches can be, in some form, broken down into “sprints,” aka, milestones that you have some predetermined about of time to work on, like two weeks. (Coincidentally, our Lab assignments are due in two week chunks too.)</p>
+
+<p>But what if you have a software development position that isn’t friendly to “chunking” your time like that? A common reason for that is that tasks constantly come in (as “tickets”), and you simply need to process them in some order, whether that’s in the order they come in or according to some measure of importance. Here your time is dictated by the tasks, not the other way around.</p>
+
+<p>So while Waterfall and Cyclic approaches to SDLC can handle time-chunkable kinds of work, it’s <em>Kanban</em> and its siblings that can handle constant-stream kinds of work.</p>
+
+<p><strong>Now read (skim) “What’s the Difference? Agile vs Scrum vs Waterfall vs Kanban”</strong> from <a href="https://www.smartsheet.com/agile-vs-scrum-vs-waterfall-vs-kanban">https://www.smartsheet.com/agile-vs-scrum-vs-waterfall-vs-kanban</a></p>
+
+<p><strong>And read (actually read) “Kanban without kaizen is pointless”</strong> from <a href="https://planet-lean.com/kanban-without-kaizen-pointless/">https://planet-lean.com/kanban-without-kaizen-pointless/</a></p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>If you could have any unconventional animal as a pet (real or fictional), what would it be and why? (<a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">Credit</a>)</em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

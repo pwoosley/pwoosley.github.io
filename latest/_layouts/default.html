@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="{{ '/assets/custom.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>{{ site.title }}</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      {% include sidebar.html %}
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      {{ content }}
+
+      <!-- Previous/Next Navigation -->
+      {% include nav-footer.html %}
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="{{ '/assets/sidebar.js' | relative_url }}"></script>
+  <script src="{{ '/assets/copy-code.js' | relative_url }}"></script>
+  <script src="{{ '/assets/menu.js' | relative_url }}"></script>
+</body>
+</html>

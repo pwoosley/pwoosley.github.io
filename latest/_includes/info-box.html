@@ -1,0 +1,8 @@
+<div class="info-box">
+  {% if include.title %}
+    <h4>{{ include.title }}</h4>
+  {% endif %}
+  <div class="info-box-content">
+    {{ include.content | markdownify }}
+  </div>
+</div>

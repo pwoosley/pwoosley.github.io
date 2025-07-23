@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 09 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-9">Reading / Journal 9</h1>
+
+<h2 id="algorithms-️">Algorithms ✏️</h2>
+
+<h2 id="reading">Reading</h2>
+
+<div class="info-box">
+  <h4>💬 Midpoint Check-in</h4>
+  <p>Welcome back from break!</p>
+  <p>Since it's the midpoint of our semester, it's a good time to check in with how folks are feeling.</p>
+  <p>Feel free to reflect in your journal this week on your thoughts on the course so far.</p>
+  <p>If you want some survey questions to help get you started, consider these:</p>
+  <ul>
+    <li>Approximately how much time have you devoted to this course on a weekly basis thus far?</li>
+    <li>Have you read all of the announcements, messages, readings and videos, and other weekly course items? If no, do you pick and choose, or prefer to figure things out on your own?</li>
+    <li>Back in <a href="#">Lab 1</a>, I had you create a complex Python script to test everything out. Since then, do you feel more knowledgeable with any pieces of that script? Where are you still fuzzy?</li>
+    <li>Do you have any comments, recommendations, or questions for me moving forward in the course to help you be successful? Some example things to consider are course design, layout, resources provided, scheduling online meetings, course assistance, assignments, and grades.</li>
+  </ul>
+</div>
+
+<p>Since we are starting to produce plots in Lab 4, I want to start by sharing some reading links that might help support you on that:</p>
+
+<p><strong>Now read (optional, but recommended) “Plotting”</strong> from <a href="https://www.w3schools.com/python/pandas_plotting.asp">https://www.w3schools.com/python/pandas_plotting.asp</a></p>
+
+<p><strong>And read (optional, but recommended) “Visualization”</strong> from <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html</a></p>
+
+<p><strong>And read (optional, but recommended) the “Boolean indexing” section from “10 minutes to pandas”</strong> from <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html</a></p>
+
+<p>We’ll continue to talk about plotting in the next Lab too, but it’s good to get some of the reading for it out of the way now.</p>
+
+<hr />
+
+<p>Last week we introduced multiple ways to represent collections of data in Python.</p>
+
+<p>A collection of data is like a database, and a good database lets you do four things: CRUD.</p>
+
+<ul>
+  <li>Create, aka, add new data to your database/collection, like writing a value down when your web scraper finds a positive match.</li>
+  <li>Read, aka, access data from your database/collection, like having your program display results. This could be the results for all of your data, results for a certain subset of your data, or all the data for one person/student/website/book/chapter/thing/etc. (whatever your topic is about). This could also be accessing the data from your collection in some particular order, such as the shortest student first.</li>
+  <li>Update, aka, modify the data for one item in your database/collection. Maybe you want to count how often a book mentioned Tea and Chair. So we start with a TeaCount=0 and we add +1 to it each time we find a new mention of Tea. That would be an “update” to the data for that book. At the end our program will show the total count, but along the way it would make small, incremental updates. Or, maybe you’re in charge of a database for a large bank. Whenever someone makes a deposit, you’ll need to make absolutely sure that person’s account record is updated properly, else they’re gonna be real mad when their rent check bounces next week.</li>
+  <li>Delete, aka, remove data for an item from your database/collection. I can’t imagine a scenario for your projects in this class where you might need to do this, but we’ll talk a little about it, since (1) my imagination is tired today and (2) it’s good knowledge to have.</li>
+</ul>
+
+<p>So that’s the topic of this week: learning how to think about various CRUD-style algorithms. There’s others, but 80% of what you’ll do in the future boils down to some creative use of some part of CRUD.</p>
+
+<p><strong>Now read “CRUD in Series”</strong> from <a href="https://python-tricks.com/crud-in-series/">https://python-tricks.com/crud-in-series/</a></p>
+
+<hr />
+
+<p>The <em>intuition</em> about what kind of task you’re dealing with and how you should approach it, that’s the lesson here. The specific code you need to write for your own project, well, that all depends on what your project is.</p>
+
+<p>It’s a “teach a man to fish” kind of day.</p>
+
+<p>Let’s start with the CUDs and save the R for last, since there’s a looong list of Read tasks, while the rest are fairly consistent.</p>
+
+<hr />
+
+<p><strong>In Create tasks</strong>, you always start with (1) information about a new item you want to add to your collection and (2) a collection that we assume is in a “proper” state. Your task is to ensure that (1) the new item ends up in the collection, (2) no data is deleted, overwritten, or needlessly duplicated, and (3) the collection stays in a “proper” state.</p>
+
+<p>Say our collection is a pair of lists. Paired lists are only “proper” if they stay the same length and in the same order. This would do the trick:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our collection: paired lists
+</span><span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Our Create algorithm
+</span><span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+
+  <span class="c1"># Remember the scope reading back on Week 2ish?
+</span>  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="c1"># Modify collections: add the right
+</span>  <span class="c1"># data to the right collection
+</span>  <span class="n">students</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+  <span class="n">ages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Run it!
+# Alice should be in our collection with age 18
+</span><span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Make sure you’re clear on how this code works and how it addresses the task at hand (“creating” and item for our “database”) before you move on.</p>
+
+<hr />
+
+<p><strong>Update tasks</strong> always start with (1) an identifier of what item you want to update, (2) new information to update it with, and (3) a collection we assume is in a proper state. Your task is to ensure (1) the item has the requested changes, (2) no other information changes, and (3) the collection remains in a proper state.</p>
+
+<p>In dictionaries, this is simple:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our collection: a dictionary
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Our Create algorithm
+</span><span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">data</span>
+  
+  <span class="c1"># We assume we're creating it for
+</span>  <span class="c1"># the first time
+</span>  <span class="n">data</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="c1"># Our Update algorithm
+</span><span class="k">def</span> <span class="nf">updateAge</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">data</span>
+  
+  <span class="c1"># We assume the student already
+</span>  <span class="c1"># exists so this would update their
+</span>  <span class="c1"># age
+</span>  <span class="n">data</span><span class="p">[</span><span class="n">student</span><span class="p">]</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="c1"># Run it!
+# Alice should be in our collection with age 19
+</span><span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="nf">updateAge</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>But in other collection types, it can get tricky. If multiple items have the same identifier (multiple students have the same name), should you update the information for <em>all</em>, <em>some</em>, <em>one</em>, or <em>none</em> of them?</p>
+
+<p>As a default rule, go with <em>all</em>. If that seems wrong for your data for your project, ensure that the items have different identifiers. For example, refer to students by their student id numbers, not their first names.</p>
+
+<p>So to do this with paired lists, use a loop with an if:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our collection: paired lists
+</span><span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Our Create algorithm
+</span><span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="n">students</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+  <span class="n">ages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Our Update algorithm
+</span><span class="k">def</span> <span class="nf">updateAge</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="c1"># Find everyone with the requested name,
+</span>  <span class="c1"># and update their age
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">students</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">student</span> <span class="o">==</span> <span class="n">students</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+      <span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="c1"># Run it!
+# Four people named Alice should be in our collection all with age 28
+</span><span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+<span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="nf">updateAge</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This is…fine.</p>
+
+<p>If you have a <em>loooot</em> of data, that for loop is going to slow things down. Next week we’ll talk more about efficiency. But for most things I can imagine y’all doing in your project, this loop+if tactic will get the job done just fine.</p>
+
+<p>Before we move on, one more Update example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our collection: paired lists
+</span><span class="n">students</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Our Create algorithm
+</span><span class="k">def</span> <span class="nf">addItem</span><span class="p">(</span><span class="n">student</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="n">students</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">student</span><span class="p">)</span>
+  <span class="n">ages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Our Update algorithm
+</span><span class="k">def</span> <span class="nf">happyBirthday</span><span class="p">(</span><span class="n">student</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">students</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">student</span> <span class="o">==</span> <span class="n">students</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+      <span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Run it!
+# Four people named Alice should be in our collection with ages 21, 22, 23, and 35
+</span><span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+<span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>
+<span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="nf">addItem</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="nf">happyBirthday</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">happyBirthday</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">happyBirthday</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>I mentioned way up above that in an Update we might want to increment a value. Here, <code class="language-plaintext highlighter-rouge">happyBirthday</code> increments the age of all the students whose name match the name given.</p>
+
+<hr />
+
+<p><strong>Delete</strong> is similar to Update. You begin with an identifier of what to delete and a collection you need to keep in a proper state. And like Update, you need to decide what to do if you have multiple items that match your identifier. And like Update, I recommend defaulting to “all.”</p>
+
+<p>Deletes can be tricky, since you can’t delete <em>as</em> you are looping through the collection finding things to delete. In the for loop in the <code class="language-plaintext highlighter-rouge">updateAge</code> above, we let <code class="language-plaintext highlighter-rouge">i</code> run over the length of the list. And if we delete items <em>inside</em> the for loop, then the length of our list will change. That can, at best, make logic hard to follow. At worst, it can lead to crashes and accidentally deleted data.</p>
+
+<p>So how <em>should</em> you write a Delete?</p>
+
+<p>This is actually such a good efficiency problem that I want to save it for next week. In short: It depends on how much data you have total, how many items you are likely to need to delete in one go, and what type of collection you have.</p>
+
+<hr />
+
+<p><strong>All that’s left is Read</strong>. Like everything above, you begin with a collection. Optionally, you might also begin with information relevant to that collection. But you <em>never</em> modify the data in your collection while you read. <em>Never.</em></p>
+
+<p>All Read tasks can be done in three steps:</p>
+
+<ol>
+  <li>Filter: What items in our collection do we care about for this task?</li>
+  <li>Map: What value(s) do we associate/compute for each of those items?</li>
+  <li>Reduce: What do we do with those values to get “the” answer for this task?</li>
+</ol>
+
+<p>Let’s say we want to find the oldest age of students whose names start with the letter “A”.</p>
+
+<ol>
+  <li>Filter: Only students whose names start with the letter “A”</li>
+  <li>Map: Their age, represented as a number</li>
+  <li>Reduce: The maximum of those numbers</li>
+</ol>
+
+<p>This could be written a hundred different ways in Python. A super handy way is the “list comprehension” syntax. It’s very odd, but also very worth learning. Don’t abuse it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our Read algorithm
+</span><span class="k">def</span> <span class="nf">oldestWithLetter</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="n">answer</span> <span class="o">=</span> <span class="nf">max</span><span class="p">([</span> <span class="c1"># the Reduce part: find the max of these ages
+</span>    <span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>      <span class="c1"># the Map part: we want the age associated with index i
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">students</span><span class="p">))</span> <span class="c1"># just a loop
+</span>    <span class="k">if</span> <span class="n">students</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">startswith</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span> <span class="c1"># the Filter part: we only care about students with matching names
+</span>  <span class="p">])</span>
+  
+  <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<p>You don’t have to use “list comprehension” syntax. This will do the same job just fine:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our Read algorithm
+</span><span class="k">def</span> <span class="nf">oldestWithLetter</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">students</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="n">answer</span> <span class="o">=</span> <span class="n">students</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># a bad first guess
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">students</span><span class="p">)):</span> <span class="c1"># a loop
+</span>    <span class="k">if</span> <span class="n">students</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">startswith</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span> <span class="c1"># the Filter part: we only care about these students
+</span>      <span class="k">if</span> <span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="p">:</span> <span class="c1"># the Reduce part: simple logic for finding the max ourselves
+</span>        <span class="n">answer</span> <span class="o">=</span> <span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  
+  <span class="k">return</span> <span class="n">answer</span>
+</code></pre></div></div>
+
+<p>Read tasks will make up a <em>lot</em> more of your code than any of the CUDs.</p>
+
+<p>Why? CUD just gets your data together. Doing that is relatively straightforward.</p>
+
+<p>But all the steps after that? That’s the fun stuff. That’s where we’re summarizing our data in several, different, meaningful ways, and each needs its own custom Read.</p>
+
+<p>You likely have multiple things you want to “see” from your data. Maybe it’s minimums, maximums, averages, which of two groups tended to have a bigger value, or even a plot (a plot is just a Reduce in fancy clothes).</p>
+
+<p>But <em>no matter</em> what you want to do with your Read though, you can think through it with a Filter/Map/Reduce.</p>
+
+<p><strong>Now skim “Map, Filter, Reduce”</strong> from <a href="https://web.mit.edu/6.005/www/fa15/classes/25-map-filter-reduce/">https://web.mit.edu/6.005/www/fa15/classes/25-map-filter-reduce/</a> (There’s Java at the top, which you don’t need to understand to get the gist; there’s Python after that intro)</p>
+
+<p><strong>And watch “Intro to Algorithms”</strong> from <a href="https://www.youtube.com/watch?v=rL8X2mlNHPM">https://www.youtube.com/watch?v=rL8X2mlNHPM</a></p>
+
+<p><strong>And watch the first two videos</strong> from <a href="https://www.youtube.com/playlist?list=PLftH_KTPtiBKPAbFwv0srGgzxVZFm65JX">https://www.youtube.com/playlist?list=PLftH_KTPtiBKPAbFwv0srGgzxVZFm65JX</a> (That’s a great set of videos if you want to go much deeper into algorithms. I won’t require the whole thing for this class, but bookmark it for yourself for later.)</p>
+
+<p><strong>Now from BlackBoard</strong> goto <strong><em>zyBooks Wk 9 assignment</em></strong></p>
+
+<p>Search is a bare bones Read – just find one value –, and Sort is a pretty complex Update or Read – update the order of the items in the list without losing or duplicating anything.</p>
+
+<p>In a few weeks we’ll also read about Group By operations. Again, that’s just a fancy Read. And when we get to Group By, you might think of them as:</p>
+
+<ol>
+  <li>Filter individual rows</li>
+  <li>Map</li>
+  <li>Group rows into multiple sub-collections</li>
+  <li>Reduce within each of those sub-collections to get one intermediate result for each</li>
+  <li>Reduce those intermediate results into a single final result</li>
+</ol>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>Share a science experiment or discovery that seems too strange to be true. (<a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">Credit</a>)</em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

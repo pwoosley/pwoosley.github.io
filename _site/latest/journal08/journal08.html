@@ -1,0 +1,123 @@
+<h1 id="reading--journal-8">Reading / Journal 8</h1>
+
+<h2 id="collections-️">Collections ✏️</h2>
+
+<p>Journals are a combination of a few things. First, the “journal.” This is a very small weekly assignment where you write 200+ words (option 1) or submit  “tinker” code (option 2). Second, the “reading.” This is where I direct you to read from a book, an online article, or watch a video, and I supplement those with my own lecture notes, graphs, figures, quotes, or so on.</p>
+
+<p>All other assignments and lectures build upon these. Usually, there will be more reading at the start of a unit and less at the end.</p>
+
+<h2 id="reading">Reading</h2>
+
+<p>!!! note “Join Handshake”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hey everyone!
+
+I wanted to take a quick sec before break to encourage y'all to [join Handshake](https://kctcs-my.sharepoint.com/:b:/g/personal/mariah_knowles_kctcs_edu/EaOvfI_0NFFKp3Lil1YWprwB_4TK8wXJguh9_khuq_IuEA?e=65cvS6). This is free and will provide you opportunities to network and obtain part-time employment or internships.
+
+Though encouraged, this is not required, nor do I receive information on who joins or not.
+</code></pre></div></div>
+
+<p>Last week we talked about keeping your data analysis meaningful. We know intuitively that diving blindly into a data analysis task is bad, but what are you supposed to actually do about it?</p>
+
+<p>With that in mind, I gave you a breakdown for thinking through your data. The biiiiig focus there was keeping the “story” of your data front and center as you move from “big picture” down to “representation.” It’s that “representation” that the computer has to work with.</p>
+
+<p>This whole unit, we take a turn from the “story” to the technical specifics that make our code work, and work well.</p>
+
+<p>This week we focus on representing data, next week we focus on doing things with that data, and the week after that we focus on doing those things efficiently.</p>
+
+<hr />
+
+<p>So to start, let’s ask, what are the options for representating data in our programs?</p>
+
+<p>At a basic level, strings, booleans, and numbers.</p>
+
+<p>But you often want to divide your data up. You don’t want to lump all your data into <em>one</em> number, like the total age of all my students. You want those numbers separated, one age per student.</p>
+
+<p>This is where we get into collections: The many options Python has for (1) collecting multiple, related values together and (2) keeping them organized.</p>
+
+<p>At a basic level, you have arrays/lists:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>This is fine for some tasks, like computing the oldest, youngest, or average age.</p>
+
+<p>But it disconnects the age from who the students are.</p>
+
+<p>We can use “paired lists”, aka, “parallel arrays”:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Denise</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Eugene</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Frankie</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>The first age belongs to Alice, the second to Bob, and so on. The idea here is we have multiple lists, all the same size, all in the same order.</p>
+
+<p>But it is <em>possible</em> that the lists could get out of order with each other or one has one more item than the other. If you are a careful programmer you can prevent that. But if you want to be <em>sure</em> that the names and ages stay paired, you can use a dictionary instead of a list.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ages</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+  <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">:</span> <span class="mi">27</span>
+  <span class="c1"># etc
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>A dictionary is also called a “hash map.”</p>
+
+<p>If you want to get the first item from the list version of ages, you would do <code class="language-plaintext highlighter-rouge">ages[0]</code>. With a dictionary, you would do <code class="language-plaintext highlighter-rouge">ages["Alice"]</code>. What a hash map does is it takes the data <code class="language-plaintext highlighter-rouge">"Alice"</code>, converts it to a number, and looks up the age at that location. What number does it use? Who cares. That’s the idea. What this does is ensure that, if you know the name, you can find the age.</p>
+
+<p>Two issues with dictionaries though:</p>
+
+<ol>
+  <li>The “key” you use for the entries must be unique. I can’t have two students named “Alice,” not if I use first names as the “keys.” (The fix: use Student ID numbers as the “key,” but that might make life harder than it needs to be if a simpler array would do the trick, YMMV.)</li>
+  <li>What if you know the age? How do you turn that back into a list of names of students who have that age? That is a great question. Short answer: You have to search through your collection and note each time you find an age that matches what you’re looking for, then collect (in a new list/etc.) the name paired with that age. Long answer: You design a set of CRUD algorithms, the topic of next week’s journal.</li>
+</ol>
+
+<p>There are more options than just these, of course, and we’ll continue making good use out of <code class="language-plaintext highlighter-rouge">pandas</code> DataFrames, because it solves a lot of these questions for us.</p>
+
+<p>For now, the goal is to familiarize yourself with other options Python has for collections. You don’t <em>have to</em> use a DataFrame for your project. It’s just versatile, so it’s good from <em>my</em> perspective of needing to write notes that work for <em>everyone</em>, regardless of your project idea.</p>
+
+<p>Each of Python’s collection types has its strengths, weaknesses, and appropriate uses. You should pick a collection type that best (1) represents the data that you have (remember the way you thought through your project in Check-in 3) and (2) will be most helpful for the kind of questions you want your code to be able to answer.</p>
+
+<p><strong>Now read Chapter 11</strong> from our textbook.</p>
+
+<p><strong>And read “Python Lists”</strong> from <a href="https://www.w3schools.com/python/python_lists.asp">https://www.w3schools.com/python/python_lists.asp</a></p>
+
+<p><strong>And read “Python Tuples”</strong> from <a href="https://www.w3schools.com/python/python_tuples.asp">https://www.w3schools.com/python/python_tuples.asp</a></p>
+
+<p><strong>And read “Python Sets”</strong> from <a href="https://www.w3schools.com/python/python_sets.asp">https://www.w3schools.com/python/python_sets.asp</a></p>
+
+<p><strong>And read “Python Dictionaries”</strong> from <a href="https://www.w3schools.com/python/python_dictionaries.asp">https://www.w3schools.com/python/python_dictionaries.asp</a></p>
+
+<p><strong>And read “NumPy Creating Arrays”</strong> from <a href="https://www.w3schools.com/python/numpy_creating_arrays.asp">https://www.w3schools.com/python/numpy_creating_arrays.asp</a></p>
+
+<p>(There are a good number of pages about numpy on w3schools. I’m not assigning them for today, but you should familiarize yourself with what they have, in case you end up coming back to it later.)</p>
+
+<p><strong>And read “How do I read and write tabular data?”</strong> from <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/02_read_write.html">https://pandas.pydata.org/docs/getting_started/intro_tutorials/02_read_write.html</a></p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<p>!!! note “Short on Words?”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Short a few words in your journal and don't know what else to write about?
+
+This week's "get to know you" question is:
+
+*What’t the silliest thing you’ve ever done by mistake?* [(Credit)](https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way)
+
+Feel free to write about this a little bit in your journal.
+</code></pre></div></div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF (NOT a .pages) document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 1/100 towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Check-in 2 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="project-check-in-2">Project Check-in 2</h1>
+
+<h2 id="formal-pitch-️">Formal Pitch ☑️</h2>
+
+<p>In the last check-in, you brainstormed ideas. After that, you got feedback from me and you discussed your check-in with your Studio group.</p>
+
+<h2 id="second-check-in">Second Check-in</h2>
+
+<p>For this second check-in, based on the feedback you’ve gotten so far, pick just one idea to officially “pitch” to me.</p>
+
+<p>Start by responding to TWO other students on the previous Check-in. Choose students with the least responses so far and with ideas that interest you. Comment (politely, kindly, clearly!) on their ideas, which you think are interesting to explore, ways they might take that project, etc. You’ll aim to comment on the same students’ work in future Check-ins, so leave a good first impression.</p>
+
+<p>In your pitch, succinctly answer:</p>
+
+<ol>
+  <li>Why does your idea interest you?</li>
+  <li>What data are you looking at? (Be <em>specific</em>)</li>
+  <li>What are three open-ended questions you would like to ask of that data?</li>
+  <li>How will you collect this data? (For example, it’s already available at such and such website, you would scrape it from the internet from such and such places, you would manually collect it into a spreadsheet, etc.)</li>
+  <li>What else could you look at to answer those same questions using different data? (For example, when a school uses standardized tests, they shouldn’t <em>trust</em> that the test alone is a correct way to identify who is struggling–They should also check those conclusions against things like teacher observations. Ideally, these multiple types of data will “tell the same story” and also give us a richer understanding of what’s going on.)</li>
+</ol>
+
+<p>Where you look for data depends on the structure of the data you have in mind.</p>
+
+<p>For example, <a href="https://www.data-is-plural.com/archive/">https://www.data-is-plural.com/archive/</a> is a newsletter about public datasets in all varieties of formats, which is good if you just want to shop around for ideas first.</p>
+
+<p>Sites like these have mostly tabular data, which is good for numbers-only type projects, like projects based on test scores, survey data, etc.:</p>
+
+<ul>
+  <li><a href="https://www.pewresearch.org/">https://www.pewresearch.org/</a></li>
+  <li><a href="https://www.icpsr.umich.edu/">https://www.icpsr.umich.edu/</a></li>
+  <li><a href="https://catalog.data.gov/dataset">https://catalog.data.gov/dataset</a></li>
+  <li><a href="https://www.kaggle.com/datasets">https://www.kaggle.com/datasets</a></li>
+  <li><a href="https://www.pewresearch.org/download-datasets/">https://www.pewresearch.org/download-datasets/</a></li>
+  <li><a href="https://ropercenter.cornell.edu/">https://ropercenter.cornell.edu/</a></li>
+  <li><a href="https://crime-data-explorer.fr.cloud.gov/downloads-and-docs">https://crime-data-explorer.fr.cloud.gov/downloads-and-docs</a></li>
+  <li><a href="https://healthdata.gov/">https://healthdata.gov/</a></li>
+  <li><a href="https://steamdb.info/">https://steamdb.info/</a></li>
+  <li><a href="https://informationisbeautiful.net/data/">https://informationisbeautiful.net/data/</a></li>
+  <li><a href="https://github.com/rfordatascience/tidytuesday#datasets">https://github.com/rfordatascience/tidytuesday#datasets</a></li>
+  <li><a href="https://www.opensecrets.org/">https://www.opensecrets.org/</a></li>
+</ul>
+
+<p>Sites like this have raw text data, which is not split up for you already in a CSV or table like format, but that’s no problem, we can write a scraper to load that data, split it up, and automatically attempt to label that data for you (with 1s, 0s, or whatever):</p>
+
+<ul>
+  <li><a href="http://reddit.com/">http://reddit.com/</a></li>
+  <li><a href="http://gutenberg.org/">http://gutenberg.org/</a></li>
+  <li><a href="https://en.wikipedia.org/">https://en.wikipedia.org/</a></li>
+  <li><a href="https://www.imsdb.com/">https://www.imsdb.com/</a></li>
+  <li><a href="https://dc.lib.unc.edu/cdm/search/collection/sohp/">https://dc.lib.unc.edu/cdm/search/collection/sohp/</a></li>
+  <li><a href="https://usesthis.com/">https://usesthis.com/</a></li>
+</ul>
+
+<p>And sites like these have, well, very big datasets, so do with this what you will:</p>
+
+<ul>
+  <li><a href="https://beta.ukdataservice.ac.uk/datacatalogue/studies/">https://beta.ukdataservice.ac.uk/datacatalogue/studies/</a></li>
+  <li><a href="https://figshare.com/">https://figshare.com/</a></li>
+  <li><a href="https://catalog.archives.gov/">https://catalog.archives.gov/</a></li>
+  <li><a href="https://webz.io/free-datasets/">https://webz.io/free-datasets/</a></li>
+</ul>
+
+<p>So, when you answer question 2, describe at least one option you find by searching around some of those example sites. You can also branch out and give me an option you come up with on your own. Maybe there’s another website you know of that has the data you want. Maybe we have to scrape the data from that site, maybe we can just click a download button and they give it to us. Or maybe you want to manually collect the data yourself as a spreadsheet. Whatever the choice, it should (1) actually be related to your interest and (2) actually be able to help you answer your open-ended questions.</p>
+
+<p>Once you’re done jotting down your pitch for your project, post it to the discussion board for this Check-in. In the next Check-in you’ll comment on each others’ pitches.</p>
+
+<h2 id="submission">Submission</h2>
+
+<p>Post your answers/materials for the check-in above to Blackboard to the discussion board for this assignment.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Like last time, this check-in is worth 50/5000 (1%) towards your final grade. The check-ins after this will be worth more.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

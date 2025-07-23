@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic and Professional Effort in an AI World | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="academic-and-professional-effort-in-an-ai-world">Academic and Professional Effort in an AI World</h1>
+
+<p>For a long time, I’ve had a specific policy on plagiarism that accounted for how, in the real world of computing practice, we never code alone and we never <em>learn to</em> code alone.</p>
+
+<p>Everything we do is based on the work of others.</p>
+
+<p>The same policy is true, even in this world where AI can now write code for us, offer suggestions, etc.</p>
+
+<p>At the end of the day, what I care about is <em>effort</em>, and that you take credit for the effort that you do.</p>
+
+<h2 id="three-types-of-effort">Three Types of Effort</h2>
+
+<p>As I see it, the effort that you put into computing practice is made up of three parts: your authorship, your editorship, and your endorsement.</p>
+
+<p><strong>Authorship:</strong> If you write it yourself, then that’s <em>Authorship</em>. This is the stuff that comes from you, based on your own knowledge and creativity, based on what you’ve learned in this class, the tutorial videos I assign, and so on.</p>
+
+<p><strong>Editorship:</strong> If you find code online that does what you need, and you adapt it for your own uses, then that’s <em>Editorship</em>. Just searching for the right existing solution, digging through options, and fitting it into your existing code adds up to pretty substantial effort.</p>
+
+<p><strong>Endorsement:</strong> If you use ChatGPT, Copilot, Ghostwriter, or similar tools to write code for you, and you’ve taken additional steps to make sure that the code is correct and <em>actually</em> does what you want, then that is your <em>Endorsement</em> of what the tool wrote. Whether or not you understand what the AI’s suggestion means, by submitting it in this class, by using it in a real world project, etc., you are signing off that you agree with the code and what it does. I want you to take very seriously your power in this world to give endorsement to things: my cat can’t give endorsement, a plant can’t give endorsement, a 3-day-old child can’t give endorsement, a machine can’t give endorsement. But you, you can.</p>
+
+<h2 id="take-credit-for-your-efforts-all-your-efforts">Take Credit for your Efforts, All your Efforts</h2>
+
+<p>I don’t care if your efforts in this class include a mix of Authorship, Editorship, or Endorsement. I actually <em>expect</em> that you’ll have a mix of all three as things go on.</p>
+
+<p>What I care about is that you take credit for the work you do. That lets me know how students are spending their efforts in this class (and if I need to make adjustments), it lets you and I have a paper trail to defend you against claims of plagiarism, and it lets you learn to be more metacognitive about how you do your work.</p>
+
+<p>So, in <em>any</em> submission that is not pure Authorship, please include this table at the top and fill it out. This goes for Journals, Labs, anything.</p>
+
+<table style="width:6in; border: none; white-space: wrap; border-collapse: collapse">
+  <tr>
+    <th style="width: 2in; border: 1px solid black">Authorship</th>
+    <th style="width: 2in; border: 1px solid black">Editorship</th>
+    <th style="width: 2in; border: 1px solid black">Endorsement</th>
+  </tr>
+  <tr>
+    <td style="width: 2in; border: 1px solid black">...describe here what you wrote purely yourself (or based on examples I gave or assigned)...</td>
+    <td style="width: 2in; border: 1px solid black">...describe here how you found code online to help, give links to those sources, and describe any edits you made to it for it to fit your purposes...</td>
+    <td style="width: 2in; border: 1px solid black">...describe here what AI suggestion tools you used, include the prompt(s) you gave to the tool, describe how you verified that the AI's code was correct for your goals (more than just checking "does it run?"), make it clear you deeply understood what your own goals were, and describe any edits you made to it for it to fit your purposes...</td>
+  </tr>
+</table>
+
+<p>This gives me a very clear glance at how you split your efforts. I talk more in <a href="journal03.md">Journal 3</a> about what endorsing an AI might entail.</p>
+
+<p>If I see you consistently falling very short in the Authorship column, then we’ll have a talk. But until then, use your best instincts on how you want to achieve tasks in this class.</p>
+
+<p>If I am lead to believe that you are replacing your own Authorship with AI and falling short on the work required to fully Endorse it, then the KCTCS official policy will apply:</p>
+
+<blockquote>
+  <p>The use of Artificial Intelligence (AI) text-generation tools or chatbots may constitute academic dishonesty. Work in this class is expected to be original and your own. Submitting AI-generated work as original work is deemed academically dishonest and is recognized as a form of cheating and held to the standards found in the KCTCS student code of conduct.</p>
+</blockquote>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

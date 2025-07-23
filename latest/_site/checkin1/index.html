@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Check-in 1 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="project-check-in-1">Project Check-in 1</h1>
+
+<h2 id="brainstorming-️">Brainstorming ☑️</h2>
+
+<p>In your term project for this class, you will apply everything we’ll learn about processing, analyzing, and displaying data in Python using libraries and custom algorithms. As a former student once put it, this project is about only two things: data integrity and critical thinking.</p>
+
+<p>To do this, you will (later in the semester) collect an amount of data too large to process by hand, such as a collection of books from <a href="https://www.gutenberg.org/">Project Gutenberg</a>, data collected by statistical reseachers from <a href="https://www.icpsr.umich.edu/">ICPSR</a>, data you’ve manually collected in a spreadsheet over a longish period of time, or…well, anything. I’ll give plenty of examples of places you can get data in the next Check-in, but you <em>really</em> should pick something that interests you and search around from there.</p>
+
+<p>The point is that you explore an open-ended question related to your interest, you offer an answer grounded in data but well explained beyond just the numbers alone, and you use Python subtantially to help you along the way.</p>
+
+<p>You are free to work on a project on any topic that is of interest to you, your friends, your family, or so on. After deciding on your data, you will use Python to scrape, clean, analyze, interact with, and/or visualize that data. Using those results, you will <em>interpret</em> the data that you collected. The end goal will be to arrive systematically at a meaningful interpretation of data that was too large to process by hand.</p>
+
+<h2 id="first-check-in">First Check-in</h2>
+
+<p>For our first check-in, you will brainstorm initial ideas for what data you want to look at and what questions you might ask of it. For example:</p>
+
+<ul>
+  <li>I might collect all the books written by the Bronte sisters from Project Gutenberg and ask, how do the sisters’ writing styles compare?</li>
+  <li>A previous student collected over 1000 comments from a subreddit and asked, how do people describe the taste of bourbon?</li>
+  <li>Another previous student wrote a web scraper that scraped stat numbers about routers from a certain website, then compared these stats</li>
+  <li>Another previous student collected data about what features of bonsai trees were associated with them winning awards</li>
+  <li>I’ve had students do projects on legos, transformer figures, their spouses’ businesses, the stock market, the 1918 influenza pandemic, tweets using the #QueerDnD hashtag, reddit comments about when D&amp;D changed from 4th to 5th edition, tweets about a recent legal case …</li>
+  <li>And <a href="https://www.reddit.com/r/dataisbeautiful/search?q=title%3AOC&amp;restrict_sr=on&amp;sort=top&amp;t=week">Data is Beautiful</a> and <a href="https://www.bloomberg.com/graphics">Bloomberg</a> both have a <em>wealth</em> of examples</li>
+</ul>
+
+<p>So, come up with a list of 3–10 data sources of some interest to you or your friends/family members. For each, say why it interests you and say a few ideas of what open-ended questions you might ask of it.  (If you list fewer data sources, I expect you to write more about each one. If you list more data sources, then you can write less about each.)</p>
+
+<p><em>The more precise you can be the better.</em> Instead of saying, “I’ll collect data from the internet,” try to say the specific site or give at least one specific example.</p>
+
+<p>Once you’re done jotting down your brainstorming ideas, post it to the discussion board for this Check-in. In the next Check-in you’ll comment on each others’ ideas.</p>
+
+<h2 id="submission">Submission</h2>
+
+<p>Post your answers/materials for the check-in above to Blackboard to the discussion board for this assignment.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>The entire term project process, from this first check-in all the way up to the final draft, is worth 31/100 towards your final grade.</p>
+
+<p>This first check-in is worth 50/5000 (1%) towards your final grade, so it is small, there are no wrong answers, and it will set the stage for you to do well on all those other points.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

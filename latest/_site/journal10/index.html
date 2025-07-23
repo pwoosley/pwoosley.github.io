@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 10 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-10">Reading / Journal 10</h1>
+
+<h2 id="efficiency-️">Efficiency ✏️</h2>
+
+<h2 id="reading">Reading</h2>
+
+<p>Last week I said that the Delete task is a good example for thinking about “efficiency.” When we say “efficiency” we either mean time (number of steps taken by the computer) or space (amount of memory required for the program to run). Usually though, we mean time.</p>
+
+<p>Let’s demonstrate with examples.</p>
+
+<p>The goal: Delete all students named “Alice” from both the names and the ages list.</p>
+
+<p>In both, we will think about their efficiency in this way:</p>
+
+<ol>
+  <li>Choose something to count (the number of times the loops run)</li>
+  <li>Think of an example input and mentally add your count up (when we get 5975 in the first example)</li>
+  <li>Reason about the “equation” that tells us how much we would count, based on the size of our inputs (<code class="language-plaintext highlighter-rouge">0.75 N^2 + N/2</code> and <code class="language-plaintext highlighter-rouge">2N</code>)</li>
+  <li>Reason about the “family” of that equation (“quadratic” and “linear”)</li>
+  <li>Reason about the “goodness” of that family, and call it a day</li>
+</ol>
+
+<hr />
+
+<p>First example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Eugene</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">deleteByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">names</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+  
+    <span class="c1"># a placeholder
+</span>    <span class="n">indexToDelete</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    
+    <span class="c1"># loop through names
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+      
+      <span class="c1"># when we find a match, write it down, break out of the for loop
+</span>      <span class="k">if</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+        <span class="n">indexToDelete</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">break</span>
+    
+    <span class="c1"># we found nothing, so break the loop, we're done
+</span>    <span class="k">if</span> <span class="n">indexToDelete</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+      <span class="k">break</span>
+      
+    <span class="c1"># else we did find something, so delete it,
+</span>    <span class="c1"># then let the while loop continue, we might
+</span>    <span class="c1"># find something else
+</span>    <span class="k">else</span><span class="p">:</span>
+      <span class="n">names</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+      <span class="n">ages</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+
+<span class="c1"># test a "before and after" to see if it worked
+</span><span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+<span class="nf">deleteByName</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Does this code work? Yes. Run it for yourself, step through how it works, and convince yourself that it works before you read on.</p>
+
+<p>Is this code fast? Not really.</p>
+
+<p>Let’s say that we have 1000 students in our class. And let’s say that there are five students named Alice to be deleted. And let’s say that they are all at the end of the list.</p>
+
+<p>What will this code do?</p>
+
+<p>First, it will enter the while loop.</p>
+
+<p>Then, it will enter the for loop. The for loop will run 996 times in order to find the first Alice.</p>
+
+<p>Then it will leave the for loop, then delete Alice #1, then repeat the while loop.</p>
+
+<p>Then for loop will run 996 times in order to find the second Alice. Then delete her.</p>
+
+<p>Then 996 times to find the third Alice, then delete her.</p>
+
+<p>Then another 996 times for the fourth Alice.</p>
+
+<p>Then another 996 times for the fifth Alice.</p>
+
+<p>And then–we’re not done yet!–a final 995 times, since the for loop’s job is to check if there are any matches. Our Delete logic doesn’t stop until it’s <em>sure</em> that there are no matches. So we need this final pass to make sure that we’re done.</p>
+
+<p>How many times did the for loop run in the end?</p>
+
+<p><code class="language-plaintext highlighter-rouge">5*996+995 = 5975</code></p>
+
+<p>That’s almost 6 times the length of our list!</p>
+
+<p>Turns out, we can make an equation to represent how “efficient” this Delete code is, regardless of the particular numbers we choose for our hypothetical big list of students.</p>
+
+<p>If you have <code class="language-plaintext highlighter-rouge">N</code> students in our list, and you have <code class="language-plaintext highlighter-rouge">M</code> students who need to be deleted (worst case, let’s assume they are at the end of the list), then this Delete code will need to run that for loop this many times:</p>
+
+<p><code class="language-plaintext highlighter-rouge">M(N-M+1) + (N-M)</code></p>
+
+<p>Notice I mentioned “worst case.” When we are evaluating the efficiency of code, we usually care about “worst case.” Maybe your code is fast on some data, but if I’m running your code on my big enterprise server, and the worst case happens along, will my server start to lag because of you? Sure, the for loop will finish really fast if Alice is at the start of the list. But I ain’t taking the chance on that.</p>
+
+<p>That’s the idea.</p>
+
+<p>So what’s the worst case of <code class="language-plaintext highlighter-rouge">M(N-M+1) + (N-M)</code>?</p>
+
+<p>It’s when <code class="language-plaintext highlighter-rouge">M=N/2</code>, ie, there are 500 Alice’s in our list of 1000 students, and all the Alices are at the end of the list.</p>
+
+<p>The math on that (<code class="language-plaintext highlighter-rouge">N^2</code> means “N squared”):</p>
+
+<p><code class="language-plaintext highlighter-rouge">N/2 * (N - N/2 + 1) + (N - N/2)</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">N^2/2 - N^2/4 + N^2/2 + N - N/2</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">N^2 - N^2/4 + N - N/2</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">0.75 N^2 + N/2</code></p>
+
+<p>So is this a <em>bad</em> equation?</p>
+
+<p>It falls into a “family” of equations we can just call <code class="language-plaintext highlighter-rouge">N^2</code>, the “quadratic” family.</p>
+
+<p>But I could have told you that without doing any of that math!</p>
+
+<p>There is a loop inside of a loop. Two nested loops. Thus, <code class="language-plaintext highlighter-rouge">N^2</code>. If you have three loops nested, then it’s <code class="language-plaintext highlighter-rouge">N^3</code>. If you have 1000 loops nested (why on God’s green Earth would you do that), then it’s <code class="language-plaintext highlighter-rouge">N^1000</code>.</p>
+
+<p>All of these are part of the larger <code class="language-plaintext highlighter-rouge">N^k</code> family, the “polynomial” family. And polynomial-time algorithms are considered okay runtimes. Not great, but okay.</p>
+
+<p>Yes, this Delete code could be better. But it isn’t <em>bad</em>.</p>
+
+<hr />
+
+<p>“How <em>could</em> it be better?” You ask.</p>
+
+<p>Second example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Bob</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Cindy</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Eugene</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">deleteByName</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+  <span class="k">global</span> <span class="n">names</span>
+  <span class="k">global</span> <span class="n">ages</span>
+  
+  <span class="c1"># an empty list to start us off
+</span>  <span class="n">indicesToDelete</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="c1"># loop through names
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+
+    <span class="c1"># when we find a match, write it down, then keep looking
+</span>    <span class="k">if</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+      <span class="n">indicesToDelete</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+  <span class="c1"># while we have things to delete,
+</span>  <span class="c1"># delete them. NOTE: pop() pulls
+</span>  <span class="c1"># from the end of the list, so this
+</span>  <span class="c1"># deletes in REVERSE order, that's
+</span>  <span class="c1"># important. If we delete from the
+</span>  <span class="c1"># start of the list first, then
+</span>  <span class="c1"># the indices of all the values
+</span>  <span class="c1"># will change, so they won't align
+</span>  <span class="c1"># with the list we jotted down anymore
+</span>  <span class="k">while</span> <span class="nf">len</span><span class="p">(</span><span class="n">indicesToDelete</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">indexToDelete</span> <span class="o">=</span> <span class="n">indicesToDelete</span><span class="p">.</span><span class="nf">pop</span><span class="p">()</span>
+    <span class="n">names</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+    <span class="n">ages</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">indexToDelete</span><span class="p">)</span>
+
+<span class="c1"># test a "before and after" to see if it worked
+</span><span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+<span class="nf">deleteByName</span><span class="p">(</span><span class="sh">"</span><span class="s">Alice</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Does this code work? Yes. Run it for yourself, step through how it works, and convince yourself that it works before you read on.</p>
+
+<p>Is this code fast? Better than <code class="language-plaintext highlighter-rouge">N^2</code>!</p>
+
+<p>First, we for-loop through our entire list. That’s <code class="language-plaintext highlighter-rouge">N</code> steps.</p>
+
+<p>Then we while-loop through the list of items to delete. That’s <code class="language-plaintext highlighter-rouge">M</code> steps.</p>
+
+<p>And we’re done. A total of <code class="language-plaintext highlighter-rouge">N+M</code> steps, simplified to just <code class="language-plaintext highlighter-rouge">2N</code> steps in the worst case.</p>
+
+<p>And again, I could have told you that without doing any math: We have two loops, one after another, <code class="language-plaintext highlighter-rouge">N</code> for the first and <code class="language-plaintext highlighter-rouge">N</code> for the second, so that’s worst case <code class="language-plaintext highlighter-rouge">N+N=2N</code>.</p>
+
+<p>This version of Delete falls into the “linear” family, those that take <code class="language-plaintext highlighter-rouge">k*N</code> steps. And linear-time algorithms are considered pretty decent!</p>
+
+<p>It’s hard to get better than linear-time in a lot of cases, so I’d take the win and call it a day!</p>
+
+<hr />
+
+<p>In most Computer Science programs, CS III (or the equivalent) focuses on the math and tricks that help you answer steps 3-5 from my list of steps at the very top. Maybe in that class, maybe in a later class, you’d learn the common tricks to writing algorithms with better efficiency.</p>
+
+<p>The take-aways for us in this class:</p>
+
+<ol>
+  <li>You can go a long way with just careful reason alone</li>
+  <li>Your code has to work first, who cares about the efficiency of a bad algorithm</li>
+  <li>Linear is always better than quadratic. If you can, avoid putting loops inside of one another. Loops that come <em>after</em> one another is fine.</li>
+  <li>Watch out for time/space trade-offs. Sure, the second version of Delete is faster, but it also takes up more memory: It required a <code class="language-plaintext highlighter-rouge">indicesToDelete</code> list, which could be size <code class="language-plaintext highlighter-rouge">N</code> in the worst case, while the first version of Delete just needed <code class="language-plaintext highlighter-rouge">1</code> slot in memory to hold <code class="language-plaintext highlighter-rouge">indexToDelete</code>. This is actually <em>reaaaaaally</em> common in algorithm design: You can make it faster, <em>if</em> you track more data to help you out.</li>
+  <li>Doing better than “linear” gets out of scope for our class, sadly, but I’ll leave some extra resources below for those interested in learning more.</li>
+</ol>
+
+<p><strong>Now watch “Introduction to Big O Notation and Time Complexity (Data Structures &amp; Algorithms #7)”</strong> from <a href="https://www.youtube.com/watch?v=D6xkbGLQesk">https://www.youtube.com/watch?v=D6xkbGLQesk</a> (This is a long video, but he does a great job, and it goes well with where we are in this class)</p>
+
+<p><strong>Now from BlackBoard</strong> goto <strong><em>zyBooks Wk 10 assignment</em></strong></p>
+
+<p>Other resources for those interested in learning more:</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=0xBq58IH-jY">https://www.youtube.com/watch?v=0xBq58IH-jY</a></li>
+  <li><a href="http://www.cs.sjtu.edu.cn/~jiangli/teaching/CS222/files/materials/Algorithm%20Design.pdf">http://www.cs.sjtu.edu.cn/~jiangli/teaching/CS222/files/materials/Algorithm%20Design.pdf</a></li>
+  <li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-videos/">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-videos/</a></li>
+</ul>
+
+<p>(The second link is a PDF for a whole textbook. Takes a good minute to download.)</p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>What’s something you’ve done especially well so far this week? Big or small! (<a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">Credit</a>)</em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Journal 01
+---
+
 # Reading / Journal 1
 
 ## Up and Running ✏️

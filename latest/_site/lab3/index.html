@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 3 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="lab-3-unedited">Lab 3 (UNEDITED)</h1>
+
+<h2 id="scraping-and-looping-">Scraping and Looping 🧑‍🔬</h2>
+
+<p>Labs provide hands-on experience with course material. They have three parts: review questions, guided exercise, open-ended exercise.</p>
+
+<p>The first few Labs provide practice with fundamentals, and the later Labs go hand-in-hand with the term project check-ins.</p>
+
+<p>Tips are at the very bottom. You should read them.</p>
+
+<h2 id="part-13-review-questions">Part 1/3: Review Questions</h2>
+
+<ol>
+  <li>What does a “negative index” mean in Python?</li>
+  <li>The variable <code class="language-plaintext highlighter-rouge">cart</code> contains this list: <code class="language-plaintext highlighter-rouge">["apple", "orange", "banana", "cheese"]</code>. What would you write in Python to print only the first item in the that list?</li>
+  <li>What Python would you write to:
+    <ul>
+      <li>print only the last item in that list?</li>
+      <li>print the items in alphabetical order?</li>
+      <li>loop and print the items in alphabetical order, one item at a time?</li>
+      <li>add “pepper” to the end of the list?</li>
+      <li>replace “banana” with “peanut butter” in the list, without modifying anything else about the list?</li>
+      <li>make a loop display the numbers 0 through 99?</li>
+      <li>make a loop display the numbers 1 through 100?</li>
+      <li>make a loop display the even numbers between 1 and 100?</li>
+    </ul>
+  </li>
+  <li>(Come back and answer this question after completing the rest of the assignment) What problems, if any, did you encounter at any point in this Lab? What did you do to overcome them?</li>
+</ol>
+
+<h2 id="part-23-guided-exercise">Part 2/3: Guided Exercise</h2>
+
+<p>Last Lab we saw how to make a data file manually in Excel/etc., then load that into Python and do some logic on it. This time, we’ll use Python to create a CSV file for us by scraping content from the web. An existing tool, <a href="https://www.mediawiki.org/wiki/Manual:Pywikibot">pywikibot</a>, exists for scraping Wikipedia like we’ll be doing. However, we’ll write our own from scratch for learning purposes.</p>
+
+<p>This will be a bit longish compared to our usual Guided Exercises. Each step is small, but there’s a good number of them. So, I’ve broken the steps up and labeled the sections with bold headings, so hopefully that makes things easier to navigate if you scroll away and lose your place.</p>
+
+<p>And one last note before we get started, in the code I have you using the URL <code class="language-plaintext highlighter-rouge">https://en.wikipedia.org/wiki/Catherine,_Duchess_of_Cambridge</code>. If you have problems towards the end with your code going just waaaay to slow, feel free to change that URL. Something like <code class="language-plaintext highlighter-rouge">https://en.wikipedia.org/wiki/K%C5%8Djima</code> is good since it has <em>some</em>, but not a <em>lot</em> of links inside it.</p>
+
+<h3 id="downloading-the-data">Downloading the data…</h3>
+
+<p>First, start with this Python and make sure you can get it to run without error, as a check that you have all the necessary libraries installed:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load what we need for web scraping
+</span><span class="kn">from</span> <span class="n">requests</span> <span class="kn">import</span> <span class="n">get</span>
+<span class="kn">from</span> <span class="n">parse</span> <span class="kn">import</span> <span class="n">search</span>
+<span class="kn">from</span> <span class="n">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+</code></pre></div></div>
+
+<p>Second, add this to the bottom and run again (be sure to edit the strings inside the <code class="language-plaintext highlighter-rouge">my_boy_headers</code> to match your own name! Include your name, the word “bot”, a version number, and the url to this assignment):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># HTTP header settings
+# We'll use these in a bit to help keep our scraper from getting blocked
+</span><span class="n">my_bot_headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="sh">'</span><span class="s">User-Agent</span><span class="sh">'</span><span class="p">:</span>
+    <span class="sh">'</span><span class="s">Mozilla/5.0 (compatible; MariahKnowlesBot/1.0; +https://cit144.knowles.codes/lab3)</span><span class="sh">'</span>
+<span class="p">}</span>
+
+<span class="c1"># Download a webpage so we can scrape from its HTML
+</span><span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://en.wikipedia.org/wiki/Catherine,_Duchess_of_Cambridge</span><span class="sh">"</span>
+<span class="n">html</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">my_bot_headers</span><span class="p">).</span><span class="n">text</span>
+
+<span class="c1"># Check that it worked
+</span><span class="nf">print</span><span class="p">(</span><span class="n">html</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">200</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Embed a screenshot and check that you are getting <em>similar</em> results to mine:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F0a2a51a2-2df2-49e9-9013-34f48139a715.image.png?v=1609697336291" alt="Instructor's scraping one file results" /></p>
+
+<p>Third, we told Python to download a certain URL. Visit the same URL yourself in your browser. Scroll around and get a sense of what all information is there. This is what <em>us humans</em> see when we view this HTML through our browsers.</p>
+
+<p>Fourth, right click / view source on that page. This is what <em>Python</em> sees when it downloads that HTML.</p>
+
+<hr />
+
+<h3 id="scraping-the-data-for-values">Scraping the data for values…</h3>
+
+<p>Fifth, ctrl+f and look for “This page was last edited on” in that HTML.</p>
+
+<p>For me, that line looks like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"footer-info-lastmod"</span><span class="nt">&gt;</span> This page was last edited on 2 January 2021, at 01:46<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"anonymous-show"</span><span class="nt">&gt;</span><span class="ni">&amp;#160;</span>(UTC)<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/li&gt;</span>
+</code></pre></div></div>
+
+<p>Or, in other words, it follows this pattern:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span><span class="o">&gt;</span> <span class="n">This</span> <span class="n">page</span> <span class="n">was</span> <span class="n">last</span> <span class="n">edited</span> <span class="n">on</span> <span class="p">{</span><span class="n">day</span><span class="p">}</span> <span class="p">{</span><span class="n">month</span><span class="p">}</span> <span class="p">{</span><span class="n">year</span><span class="p">},</span> <span class="n">at</span> <span class="p">{</span><span class="n">time</span><span class="p">}</span><span class="o">&lt;</span><span class="p">...</span>
+</code></pre></div></div>
+
+<p>Sixth, scrape those values from the page using:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A pattern to search for
+</span><span class="n">pattern</span> <span class="o">=</span> <span class="sh">"</span><span class="s">&gt; This page was last edited on {day} {month} {year}, at {time}&lt;</span><span class="sh">"</span>
+
+<span class="c1"># Do the search
+</span><span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+
+<span class="c1"># Display the results
+</span><span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">day</span><span class="sh">"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">month</span><span class="sh">"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">year</span><span class="sh">"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">time</span><span class="sh">"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Embed another screenshot and check against my results again:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2Fc37cf78d-06ac-41ce-9cac-c56e98c26020.image.png?v=1609699188420" alt="Instructor's scraping one value results" /></p>
+
+<hr />
+
+<h3 id="chunking-the-data-scraping-the-chunks">Chunking the data, scraping the chunks…</h3>
+
+<p>Seventh, what if we want to scrape multiple values from the one page of data, like all the links to other wiki pages? Let’s do that now. Return to the view-source HTML. Ctrl+f and look for “href”. Links to other wiki pages look like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/wiki/Prince_Harry,_Duke_of_Sussex"</span> <span class="na">title=</span><span class="s">"Prince Harry, Duke of Sussex"</span><span class="nt">&gt;</span>The Duke of Sussex<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+
+<p>Or, in other words, they follow this pattern:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span><span class="n">href</span><span class="o">=</span><span class="s">"/wiki/{wiki_link}"</span> <span class="n">title</span><span class="o">=</span><span class="s">"{hover_title}"</span><span class="o">&gt;</span><span class="p">{</span><span class="n">link_text</span><span class="p">}</span><span class="o">&lt;</span><span class="p">...</span>
+</code></pre></div></div>
+
+<p>Eighth, let’s write the scraping code.</p>
+
+<p>In order to scrape a lot of values from a single page, imagine the HTML as one big block of text. Then imagine splitting that into a bunch of smaller “chunks.” Then imagine checking each chunk to see if it has a valid link we care about and scraping those values out.</p>
+
+<p>Since the links always end with <code class="language-plaintext highlighter-rouge">/a&gt;</code>, I think splitting on that would be a good idea. That way, each “chunk” should contain exactly one link.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Split into chunks
+</span><span class="n">chunks</span> <span class="o">=</span> <span class="n">html</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">"</span><span class="s">/a&gt;</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Check that it worked
+</span><span class="nf">print</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Embed another screenshot and check against my results again:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2Fc8ae224d-7df1-43cb-8fe9-8f9bff80c18b.image.png?v=1609699884723" alt="Instructor's chunking results" /></p>
+
+<p>Ninth, loop through the chunks and attempt to scrape URLs that match our pattern from above:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Our search pattern
+</span><span class="n">pattern</span> <span class="o">=</span> <span class="sh">'</span><span class="s">href=</span><span class="sh">"</span><span class="s">/wiki/{wiki_link}</span><span class="sh">"</span><span class="s"> title=</span><span class="sh">"</span><span class="s">{hover_title}</span><span class="sh">"</span><span class="s">&gt;{link_text}&lt;</span><span class="sh">'</span>
+
+<span class="c1"># Loop through the chunks and try to get a URL from each
+</span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">wiki_link</span><span class="sh">"</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Note the <code class="language-plaintext highlighter-rouge">if results is not None</code> there so we ignore the cases where a chunk does not have a valid link we care about.</p>
+
+<p>Tenth, let’s store those scraped URLs in a list instead of just printing them. Update the previous step’s for loop to do this instead:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Loop through the chunks and try to get a URL from each
+</span><span class="n">found_urls</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">:</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">wiki_link</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">wiki_link</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">found_urls</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="sh">"</span><span class="s">https://en.wikipedia.org/wiki/</span><span class="sh">"</span> <span class="o">+</span> <span class="n">wiki_link</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">found_urls</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>Embed another screenshot and check:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F27d48820-29f1-4809-91e5-7eb2ebfbf62e.image.png?v=1609698720020" alt="Instructor's storing URLs results" /></p>
+
+<hr />
+
+<h3 id="scraping-a-list-of-urls">Scraping a list of URLs…</h3>
+
+<p>Eleventh, you now know how to scrape one URL for specific values, and you now know how to chunk a single page and scrape those chunks so that you can get multiple values from one page. But we can scrape a <em>list</em> of URLs in a similar way, like if you have a list of reddit pages you want to get the comments from. Essentially, you wrap everything we’ve done so far up in a for loop that loops over a list of URLs you care about.</p>
+
+<p>Since we have a list of URLs we’ve just scraped, let’s load <em>those</em> pages’ data and scrape them too:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Loop through those URLs and scrape each for the date
+</span><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">found_urls</span><span class="p">:</span>
+  <span class="n">html</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">firefox_headers</span><span class="p">).</span><span class="n">text</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="sh">"</span><span class="s">&gt; This page was last edited on {day} {month} {year}, at {time}&lt;</span><span class="sh">"</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">day</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">month</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">year</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">time</span><span class="sh">"</span><span class="p">]</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The URL </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s"> was last updated on </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s">.</span><span class="sh">"</span><span class="p">)</span>
+
+  <span class="c1"># Pause for a second before scraping again.
+</span>  <span class="c1"># This helps us from getting blocked
+</span>  <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Here’s my partial results, embed another screenshot and check:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F6ef2ec30-a308-4a5d-b589-9fb6ee834bea.image.png?v=1609700226658" alt="Instructor's spider partial results" /></p>
+
+<p>You’ll notice that it…takes a long time to run. Stop it early once you’ve seen enough to be convinced your code works.</p>
+
+<p>This code is slow is because there is a <code class="language-plaintext highlighter-rouge">sleep(1)</code> to slow our “spider” down on purpose. That helps keep us from getting blocked.</p>
+
+<p>But it’s also slow because some links go to the same place, so we end up duplicating a lot of work. To fix that “duplicate link” problem, you can do this for your for loop instead:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nf">set</span><span class="p">(</span><span class="n">found_urls</span><span class="p">):</span>
+  <span class="bp">...</span>
+</code></pre></div></div>
+
+<p>It’ll still be slow (there’s a lot of links in that list!), but it’ll be a tad better.</p>
+
+<hr />
+
+<h3 id="saving-the-data-to-a-csv-file">Saving the data to a CSV file…</h3>
+
+<p>Twelfth, so far we’re scraping values from a lot of pages. But we’re still just throwing that data away. We print it and move on. Since it took a long time to <em>compute</em> those results, let’s store them in a <code class="language-plaintext highlighter-rouge">.csv</code> file so we don’t have to do that <em>again and again and again</em>. And bonus, we could load that CSV data into whatever other Python code we want.</p>
+
+<p>Modify your last for loop to be:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create an empty DataFrame, before the loop
+</span><span class="n">data</span> <span class="o">=</span> <span class="nc">DataFrame</span><span class="p">({</span>
+  <span class="sh">"</span><span class="s">URL</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="sh">"</span><span class="s">Day</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="sh">"</span><span class="s">Month</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="sh">"</span><span class="s">Year</span><span class="sh">"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="sh">"</span><span class="s">Time</span><span class="sh">"</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">})</span>
+
+<span class="c1"># Loop through those URLs and scrape each for the date
+</span><span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="nf">set</span><span class="p">(</span><span class="n">found_urls</span><span class="p">):</span>
+  <span class="n">html</span> <span class="o">=</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">firefox_headers</span><span class="p">).</span><span class="n">text</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="sh">"</span><span class="s">&gt; This page was last edited on {day} {month} {year}, at {time}&lt;</span><span class="sh">"</span>
+  <span class="n">results</span> <span class="o">=</span> <span class="nf">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">html</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">results</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">day</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">day</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">month</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">year</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="sh">"</span><span class="s">time</span><span class="sh">"</span><span class="p">]</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The URL </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s"> was last updated on </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">month</span><span class="si">}</span><span class="s">-</span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s">.</span><span class="sh">"</span><span class="p">)</span>
+    
+    <span class="c1"># Add this one result to the data frame, inside the loop
+</span>    <span class="c1"># (I personally hate this syntax for appending one row to a dataframe,
+</span>    <span class="c1"># but in Spring 2022 pandas deprecated another approach that was
+</span>    <span class="c1"># less efficient but clearer to understand. So, if you want to add
+</span>    <span class="c1"># one row to a dataframe, remember this non-obvious solution: First,
+</span>    <span class="c1"># create the row you want to add as a dictionary. Second, use the
+</span>    <span class="c1"># syntax data.loc[data.shape[0]] to access the part of the dataframe
+</span>    <span class="c1"># just past the end of the current last row, then put the new row there.)
+</span>    <span class="n">row</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="sh">"</span><span class="s">URL</span><span class="sh">"</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
+      <span class="sh">"</span><span class="s">Day</span><span class="sh">"</span><span class="p">:</span> <span class="n">day</span><span class="p">,</span>
+      <span class="sh">"</span><span class="s">Month</span><span class="sh">"</span><span class="p">:</span> <span class="n">month</span><span class="p">,</span>
+      <span class="sh">"</span><span class="s">Year</span><span class="sh">"</span><span class="p">:</span> <span class="n">year</span><span class="p">,</span>
+      <span class="sh">"</span><span class="s">Time</span><span class="sh">"</span><span class="p">:</span> <span class="n">time</span>
+    <span class="p">}</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">row</span>
+
+  <span class="c1"># Pause for a second before scraping again.
+</span>  <span class="c1"># This helps us from getting blocked
+</span>  <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Save the data for later, after the loop
+</span><span class="n">data</span><span class="p">.</span><span class="nf">to_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab3_data.csv</span><span class="sh">"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This adds three things: before the loop, create an empty DataFrame; during the loop, add each result to the DataFrame; after the loop, save the data to a file.</p>
+
+<p>Be VERY patient letting this one run.</p>
+
+<p>Fourteenth (I skipped unlucky step 13), view your <code class="language-plaintext highlighter-rouge">lab3_data.csv</code> file that Python made for you. Open this in Excel/etc. If you are using Repl.it, here’s the quickest way I know to download the CSV file: view your CSV file in Repl.it; then make some small edit, like adding a space somewhere, then backspace that space away, just something to “touch” the file but not really change its contents; then download the whole project by clicking the three dots / download as ZIP; then unzip the download and open your CSV from there.</p>
+
+<p>Embed a screenshot showing this file in Excel/etc. Here’s mine:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F92e4cc54-2eff-4552-9ad2-ef9e3670c280.image.png?v=1609701667366" alt="Instructor's results in Google Sheets" /></p>
+
+<hr />
+
+<h3 id="writing-your-own">Writing your own…</h3>
+
+<p>Finally, write a scraper of your own that will scrape all the assignment names from <a href="https://cit144.knowles.codes/latest">https://cit144.knowles.codes/latest</a>. Embed screenshots showing your code and results.</p>
+
+<h2 id="optional-fun-exercise">Optional Fun Exercise</h2>
+
+<p>This is completely optional, not worth extra credit or anything, just a fun warm up. I do encourage you to, as you best see fit, try basing a few Tinker journals on these optional exercises though.</p>
+
+<p>Start a new python project on Repl.it with this code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">drawSvg</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># A Drawing is like, part canvas, part list of shapes to
+# be drawn on that canvas. (0, 0) will be the dead center
+# of the image
+</span><span class="n">d</span> <span class="o">=</span> <span class="nc">Drawing</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="sh">'</span><span class="s">center</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="c1"># Make an irregular polygon shape
+</span><span class="n">myLines</span> <span class="o">=</span> <span class="nc">Lines</span><span class="p">(</span>
+  <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="c1"># first x/y coordinate
+</span>  <span class="mi">70</span><span class="p">,</span> <span class="o">-</span><span class="mi">49</span><span class="p">,</span> <span class="c1"># second x/y
+</span>  <span class="mi">95</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="c1"># ...
+</span>  <span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span>
+  <span class="n">close</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="c1"># other settings
+</span>  <span class="n">fill</span><span class="o">=</span><span class="sh">'</span><span class="s">#eeee00</span><span class="sh">'</span><span class="p">,</span>
+  <span class="n">stroke</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span>
+<span class="p">)</span>
+
+<span class="c1"># Add the shape to the canvas
+</span><span class="n">d</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">myLines</span><span class="p">)</span>
+
+<span class="c1"># Draw a rectangle
+</span><span class="n">r</span> <span class="o">=</span> <span class="nc">Rectangle</span><span class="p">(</span>
+      <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="c1"># x/y position
+</span>      <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="c1"># width and height
+</span>      <span class="n">fill</span><span class="o">=</span><span class="sh">'</span><span class="s">#1248ff</span><span class="sh">'</span>
+<span class="p">)</span>
+
+<span class="c1"># Don't forget to add it to the canvas
+</span><span class="n">d</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># Draw many circles by using a loop
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="n">c</span> <span class="o">=</span> <span class="nc">Circle</span><span class="p">(</span>
+    <span class="o">-</span><span class="mi">40</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="c1"># x/y position
+</span>    <span class="mi">30</span><span class="p">,</span> <span class="c1"># radius
+</span>    <span class="n">fill</span><span class="o">=</span><span class="sh">'</span><span class="s">red</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">stroke_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span>
+  <span class="p">)</span>
+
+  <span class="n">d</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># For a LOT more examples, see
+# https://github.com/cduck/drawSvg
+</span>
+<span class="c1"># Render the drawing to an SVG and a PNG so we can view it
+</span><span class="n">d</span><span class="p">.</span><span class="nf">setRenderSize</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span> 
+<span class="n">d</span><span class="p">.</span><span class="nf">saveSvg</span><span class="p">(</span><span class="sh">'</span><span class="s">example.svg</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">d</span><span class="p">.</span><span class="nf">savePng</span><span class="p">(</span><span class="sh">'</span><span class="s">example.png</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="c1"># A friendly message
+</span><span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Done!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Hit Run then view the <code class="language-plaintext highlighter-rouge">example.png</code> and <code class="language-plaintext highlighter-rouge">example.svg</code> images that it generates for you. You should see a doodle like this:</p>
+
+<p><img src="https://cdn.glitch.com/0e5725cf-1e7b-4a31-ba36-51513f05d47e%2F23859298-e89d-4c4f-9e80-95e1d2d62b0b.image.png?v=1609774078595" alt="Instructor's doodle results" /></p>
+
+<p>Next, look at the Manolo examples I have at the bottom of my <a href="https://cdn.glitch.com/4d1ce3eb-1449-4924-ae06-785bd41e996a%2FGenerative_Art.pdf?v=1569862153378">Generative Art</a> PDF. Try to notice the shapes in one of those drawings. Where do you see a square? a circle? a line? What colors are those shapes? Where are they placed? How big are they? Which are in the back (ie, drawn first) and which are in the front (ie, drawn last)? And how might you generate drawings like that using loops?</p>
+
+<p>For example, in the very very last image in that PDF, there is a blue squiggle in the top left. That squiggle is made out of a bunch of circles drawn right on top of each other, just moved a little each time. It seems like Manolo picked a random x/y position, drew a big white circle there, then drew a smaller blue circle on top of that, then moved his x/y position a little, then drew another blue circle, and so on.</p>
+
+<p>The idea here is to “decompose” the art of others into the steps and shapes that make it up, then take some ideas from that to get our own ideas going.</p>
+
+<p>Then, experiment with what you can make your Python do!</p>
+
+<p>As you revise, look at your picture and check your gut: what do you like about it, what do you not like about it, and so what one small change might you make to do something better? Then check your gut and revise again. Maybe you hate the color. Maybe you hate the size. Maybe you hate the emptyness and want to add another shape. The world is your oyster.</p>
+
+<p>And when you’re done, embed screenshots showing me your art!</p>
+
+<h2 id="part-33-open-ended-exercise">Part 3/3: Open-Ended Exercise</h2>
+
+<p>Create two copies of the CSV file that you made during Lab 2. (The one with the student grades.) Edit one to have slightly different grades.</p>
+
+<p>We’ll say that the original file is the students’ grades for CIT 144 Python I and the modified file is their grades for CIT 170 Database Fundamentals.</p>
+
+<p>Create a simple python program that will load both of those files in, then merge them into a single dataframe object. (Be sure to see the tips section below.)</p>
+
+<p>Once you’ve done that, have it output the first names of all students who got a 70 or higher on <em>both</em> of their finals.</p>
+
+<h2 id="submission">Submission</h2>
+
+<p>Complete Parts 1, 2, and 3 in a single Word/etc. document, then submit your document as a Word or PDF file (NOT a .pages file) to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Each Lab is worth 6/100 towards your final grade.</p>
+
+<p>6/6 - Great job, maximum points! The student completes the Lab accurately and sufficiently and honestly, demonstrating the best of their ability.</p>
+
+<p>3/6 - Student completes most but not all of the Lab. Or, student completes the Lab, but only to the minimal letter of the prompt, not actually applying the concepts of the unit. If you encounter problems or have questions, be sure to email me well before 24 hours before the due date, then continue to attempt to resolve the issue on your own while you wait for a reply.</p>
+
+<p>1/6 - Student completes less than half of the Lab with sufficient work, or student leaves entire sections blank. Make sure that you are leaving yourself enough time to complete assignments, as usually students submit incomplete work because they were rushed at the last minute.</p>
+
+<p>0/6 - Student does not submit on time or submits plagiarized or unacceptable work. Double check that you have submitted the right file, as usually students get zeros because they submitted a previous week’s work by accident.</p>
+
+<h2 id="tips">Tips</h2>
+
+<p><strong>How do I merge two dataframe objects?</strong></p>
+
+<p>Pandas has a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html">merge</a> command that allows you to combine two dataframes, similar to how you would join two tables in database programming.</p>
+
+<p>Lets say that the column that we need to <a href="https://www.w3schools.com/sql/sql_join.asp">join</a> on is called <code class="language-plaintext highlighter-rouge">ID</code>. (That is, the column that we use to identify that a record in one CSV corresponds to a record in another. If I have two files about my cats, I could join them by the cats’ first names, their birthdays, or their species, so long as whatever I choose can be reliably used to identify individual cats.)</p>
+
+<p>In that case, we might write:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span><span class="p">,</span> <span class="n">merge</span>
+
+<span class="n">data_first</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">my_first_file.csv</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">data_second</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">my_second_file.csv</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nf">merge</span><span class="p">(</span><span class="n">data_first</span><span class="p">,</span> <span class="n">data_second</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="sh">"</span><span class="s">ID</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

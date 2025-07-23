@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal 04 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="reading--journal-4">Reading / Journal 4</h1>
+
+<h2 id="logic-and-modules-️">Logic and Modules ✏️</h2>
+
+<h2 id="reading">Reading</h2>
+
+<p>Again, this should be mostly review of CIT 120.</p>
+
+<p>This week we are learning if/else and modules in Python.</p>
+
+<p>First, in Python, the values for true and false are capitalized like proper nouns. This is unlike every other single language I know, so watch out for this.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">isHumidInWisconsinSummer</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">isFreeOfSnowInWinterHere</span> <span class="o">=</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<p>Second, when you chain if/else’s together, we use <code class="language-plaintext highlighter-rouge">elif</code> for the middle sections, an abbreviation of “else if”:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Let</span><span class="sh">'</span><span class="s">s get good grades!</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Take good care of your skin!</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Dont</span><span class="sh">'</span><span class="s"> forget to file taxes!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Third, on a different topic, so far we’ve only talked about writing code in a single file.</p>
+
+<p>To import code from other files, we treat them as “modules” and import them. This is useful when you have large project you want to organize, you are working in a team, or you are loading code written by someone else (which we’ll do with Pandas/Matplotlib for the term project).</p>
+
+<p>For example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+</code></pre></div></div>
+
+<p>This will load the <code class="language-plaintext highlighter-rouge">pandas</code> module then specifically grant your program access to the <code class="language-plaintext highlighter-rouge">read_csv</code> method that is defined in that module.</p>
+
+<p>You could alternatively do:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div></div>
+
+<p>This will import <em>everything</em> from <code class="language-plaintext highlighter-rouge">pandas</code>, no matter what it is or what it is called.</p>
+
+<p>In this class, I prefer you used the more explicit version (like <code class="language-plaintext highlighter-rouge">from pandas import read_csv</code>) unless you have a good reason to ask for everything.</p>
+
+<p>Doing the more explicit version will make you more deliberate in your coding, and it makes it easier to rename things if you want to load things from two different modules that would have the same name. For example, if you are writing a web scraper, you might do:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">parse</span> <span class="kn">import</span> <span class="n">search</span>
+<span class="kn">from</span> <span class="n">re</span> <span class="kn">import</span> <span class="n">search</span> <span class="k">as</span> <span class="n">regex</span>
+</code></pre></div></div>
+
+<p>Here, we load <code class="language-plaintext highlighter-rouge">search</code> from <code class="language-plaintext highlighter-rouge">parse</code> and we also load <code class="language-plaintext highlighter-rouge">search</code> from <code class="language-plaintext highlighter-rouge">re</code>. But since those have the same name, we rename the second one to <code class="language-plaintext highlighter-rouge">regex</code> so we don’t <a href="https://en.wikipedia.org/wiki/Clobbering">clobber</a> the first name.</p>
+
+<p>You might also see syntax like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre></div></div>
+
+<p>Here, we import everything from <code class="language-plaintext highlighter-rouge">pandas</code>, like <code class="language-plaintext highlighter-rouge">read_csv</code>, but we can only access them by prefixing like <code class="language-plaintext highlighter-rouge">pd.read_csv</code>. Still, I prefer the more deliberate <code class="language-plaintext highlighter-rouge">from pandas import read_csv</code> approach. As you will see though, every place you read about Python, authors have their own preferences they stick to, which is perfectly fine. Notice the preferences of others, be aware of your own preferences, and practice converting between the two as you learn from others while designing your own code.</p>
+
+<p><strong>Now read “Python Modules”</strong> from <a href="https://www.w3schools.com/python/python_modules.asp">https://www.w3schools.com/python/python_modules.asp</a></p>
+
+<p><strong>Now from BlackBoard</strong> goto <strong><em>zyBooks Wk 4 assignment</em></strong></p>
+
+<p>And in particular, let’s become more familiar with the <code class="language-plaintext highlighter-rouge">pandas</code> module I’ve been mentioning.</p>
+
+<p><strong>Now read “Pandas DataFrames”</strong> from <a href="https://www.w3schools.com/python/pandas_dataframes.asp">https://www.w3schools.com/python/pandas_dataframes.asp</a></p>
+
+<p><strong>And read “Pandas Read CSV”</strong> from <a href="https://www.w3schools.com/python/pandas_csv.asp">https://www.w3schools.com/python/pandas_csv.asp</a></p>
+
+<p><strong>And read the “Viewing Data” section from “10 minutes to pandas”</strong> from <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html</a></p>
+
+<p><strong>And peruse the site</strong> <a href="https://catalog.data.gov/dataset?res_format=CSV">https://catalog.data.gov/dataset?res_format=CSV</a> to get a feel for what kind of CSV data is already out there</p>
+
+<h2 id="journal">Journal</h2>
+
+<p>Choose from one of the following two options as you best see fit:</p>
+
+<p><strong>Option One:</strong> Submit a brief “200+ Words” reflecting on the reading and/or the course as a whole. These 200+ words are expected to come completely from the student, ignoring words from quotes/etc. The format of these assignments is up to the student as it best helps them: bulleted point notes on the reading; questions directed at the instructor of course material; a paragraph reflecting on the Lab assignment for the week; a poem; a summary of recent technology news; anything, so long as it is turned in on time, is relevant to the course, and meets the required length.</p>
+
+<p><strong>Option Two:</strong> Submit a brief “Tinker” where you have attempted to “program” something, using the tools of the course, that is not directly related to another course assignment. Include screenshots of the input work done and the output result (even if it does not work), along with a brief statement of your intentions, the approach you took in getting it to work, and your thoughts on your result so far. Make sure it is clear what code came from you and what came from online/the reading/etc.</p>
+
+<div class="info-box">
+  <h4>❗ Short on Words?</h4>
+  <p>Short a few words in your journal and don't know what else to write about?</p>
+  <p>This week's "get to know you" question is:</p>
+  <em>Share a tech tip, shortcut, or hack that you find invaluable (<a href="https://jonitrythall.com/daily-discussion-prompts-wiggle-work-way" target="_blank">Credit</a>)</em>
+  <p>Feel free to write about this a little bit in your journal.</p>
+</div>
+
+<h2 id="submission">Submission</h2>
+
+<p>Submit your journal as a Word/PDF document to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Journals are each worth 50/5000 (1%) towards your final grade. Grading is pass/fail based on meeting the requirements of the chosen option.</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

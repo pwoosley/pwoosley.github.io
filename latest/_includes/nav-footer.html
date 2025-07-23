@@ -1,0 +1,35 @@
+{% comment %}
+  Collect only pages with nav_order and title.
+  Remove duplicates by unique URLs.
+{% endcomment %}
+{% assign pages_with_nav = site.pages | where_exp: "p", "p.nav_order != nil and p.title" %}
+{% assign sorted_pages = pages_with_nav | sort: "nav_order" | uniq: "url" %}
+{% assign current_index = -1 %}
+
+{% comment %}
+  Normalize URLs and find the current page's index.
+{% endcomment %}
+{% for p in sorted_pages %}
+  {% assign p_url = p.url | replace: 'index.html', '' | append: '/' %}
+  {% assign page_url = page.url | replace: 'index.html', '' | append: '/' %}
+  {% if p_url == page_url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+
+<nav class="docs-footer">
+  {% if current_index > 0 %}
+    {% assign prev_page = sorted_pages[current_index | minus: 1] %}
+    <a class="docs-footer-prevpage" href="{{ prev_page.url | relative_url }}">
+      « {{ prev_page.title | default: "Previous Page" }}
+    </a>
+  {% endif %}
+
+  {% if current_index >= 0 and current_index < sorted_pages.size | minus: 1 %}
+    {% assign next_page = sorted_pages[current_index | plus: 1] %}
+    <a class="docs-footer-nextpage" href="{{ next_page.url | relative_url }}">
+      {{ next_page.title | default: "Next Page" }} »
+    </a>
+  {% endif %}
+</nav>

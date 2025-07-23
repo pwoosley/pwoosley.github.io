@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 1 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="lab-1">Lab 1</h1>
+
+<h2 id="introduction-">Introduction 🧑‍🔬</h2>
+
+<p>In addition to the zyBooks interactive content, you will have five Labs.  Labs provide hands-on experience with course material.</p>
+
+<p>The first few Labs provide practice with fundamentals, and the later Labs go hand-in-hand with the term project check-ins.</p>
+
+<p>Tips are at the very bottom. You should read them.</p>
+
+<h2 id="guided-exercise">Guided Exercise</h2>
+
+<p>For this first Lab let’s practice a little of all the pieces we will work with later. The goal of this is to make sure everything works so that we can fix problems now instead of later; also, so that when you work with these tools later, it won’t be the first time you are seeing them. We’ll be putting together a rather complex GUI for showing and interacting with plots. In your term project you’ll do something <em>similar</em>, but focused around a topic of your choice. We’ll talk more about that though in the Check-in activities, and we’ll break this kind of programming into <em>much</em> smaller pieces in the other Labs.</p>
+
+<p>1) First, decide how you will run Python. (Options in Journal 1.)</p>
+
+<p>My preference is that you run everything for this class in Repl.it. To do this, visit <a href="https://repl.it/">https://repl.it/</a> and sign up for a free account. Once you are logged in, visit <a href="https://repl.it/new/python3">https://repl.it/new/python3</a> to create a new Python repl. Repl.it will automatically install any libraries for you that you might need.</p>
+
+<p><em>** LIBRARY INSTALL INSTRUCTIONS IF RUNNING PYTHON LOCALLY - SKIP IF YOU USE REPLIT **</em></p>
+
+<p>Alternatively, if you are running Python on your own computer, then you will need to install a few libraries. Do this by creating a file named <code class="language-plaintext highlighter-rouge">requirements.txt</code>, put the following in it…</p>
+
+<pre><code class="language-txt">matplotlib==3.5.1
+pandas==1.3.5
+requests==2.26.0
+parse==1.19.0
+pygubu==0.18.1
+</code></pre>
+
+<p>…, then open a command prompt and run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">-U</span> pip
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+</code></pre></div></div>
+<p><em>** END OF LIBRARY INSTALL INSTRUCTIONS IF RUNNING PYTHON LOCALLY **</em></p>
+
+<p>2) Second, download the data that you will need for this Lab by right clicking this link, <a href="../assets/lab1_data.csv">lab1_data.csv</a>, and saving the link as <code class="language-plaintext highlighter-rouge">lab1_data.csv</code>. Do NOT just click the link and open it in Excel/etc., as those tools can change the formatting of the data. (This was a very common cause of headaches in past semesters, so we’re practicing it up front.)</p>
+
+<p>Do the same to download <a href="../assets/lab1_design.ui">lab1_design.ui</a> and name it <code class="language-plaintext highlighter-rouge">lab1_design.ui</code>.</p>
+
+<p>3) Third, let’s put the data file next to your Python code. To do this, if you are on Repl.it, click the three dots / upload file. If you are on your own computer, then create a new Python file named <code class="language-plaintext highlighter-rouge">main.py</code>, save it somewhere easy to find, and make sure the <code class="language-plaintext highlighter-rouge">lab1_data.csv</code> file is saved right next to it.</p>
+
+<p>Do the same to put the <code class="language-plaintext highlighter-rouge">lab1_design.ui</code> file next to your Python code.</p>
+
+<p>4) Fourth, start with this Python code (copy and paste into your <code class="language-plaintext highlighter-rouge">main.py</code> file) and run it:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load the imports we'll need
+## We'll use pygubu to make an app
+</span><span class="kn">from</span> <span class="n">pygubu</span> <span class="kn">import</span> <span class="n">Builder</span>
+
+<span class="c1">## We'll use pandas to process data
+</span><span class="kn">from</span> <span class="n">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+
+<span class="c1">## We'll use matplotlib to add plots to our app
+</span><span class="kn">from</span> <span class="n">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="n">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">Figure</span>
+<span class="kn">from</span> <span class="n">matplotlib.backends.backend_tkagg</span> <span class="kn">import</span> <span class="n">FigureCanvasTkAgg</span>
+<span class="n">rcParams</span><span class="p">.</span><span class="nf">update</span><span class="p">({</span><span class="sh">"</span><span class="s">figure.autolayout</span><span class="sh">"</span><span class="p">:</span> <span class="bp">True</span><span class="p">})</span>
+
+<span class="c1"># Build our app
+</span><span class="n">app</span> <span class="o">=</span> <span class="nc">Builder</span><span class="p">()</span>
+<span class="n">app</span><span class="p">.</span><span class="nf">add_from_file</span><span class="p">(</span><span class="sh">"</span><span class="s">lab1_design.ui</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">window</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">canvas_frame</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">get_object</span><span class="p">(</span><span class="sh">"</span><span class="s">canvas_frame</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Load our data
+</span><span class="n">data</span> <span class="o">=</span> <span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">lab1_data.csv</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Add a plot into our app (no data yet)
+</span><span class="n">fig</span> <span class="o">=</span> <span class="nc">Figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1"># 4 in wide, 3 in tall
+</span><span class="n">axis</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">add_subplot</span><span class="p">()</span>
+<span class="n">canvas</span> <span class="o">=</span> <span class="nc">FigureCanvasTkAgg</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="n">canvas_frame</span><span class="p">)</span> 
+<span class="n">canvas</span><span class="p">.</span><span class="nf">draw</span><span class="p">()</span>
+<span class="n">canvas</span><span class="p">.</span><span class="nf">get_tk_widget</span><span class="p">().</span><span class="nf">pack</span><span class="p">()</span>
+
+<span class="c1"># Add data to the plot
+## Sum up and average the data by author
+</span><span class="n">author_sums</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">groupby</span><span class="p">([</span><span class="sh">"</span><span class="s">Author</span><span class="sh">"</span><span class="p">]).</span><span class="nf">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1">## Plot the TEA averages with a horizontal bar chart
+</span><span class="n">author_sums</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span>
+  <span class="n">ax</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="c1"># where to plot it
+</span>  <span class="n">kind</span><span class="o">=</span><span class="sh">"</span><span class="s">barh</span><span class="sh">"</span><span class="p">,</span> <span class="c1"># what kind to plot
+</span>  <span class="n">y</span><span class="o">=</span><span class="sh">"</span><span class="s">TEA</span><span class="sh">"</span> <span class="c1"># what to plot
+</span><span class="p">)</span>
+
+<span class="c1"># Just an example of adding an action to a button
+</span><span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+  <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">HI!</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">app</span><span class="p">.</span><span class="nf">connect_callbacks</span><span class="p">({</span>
+  <span class="sh">"</span><span class="s">say_hello</span><span class="sh">"</span><span class="p">:</span> <span class="n">say_hello</span>
+<span class="p">})</span>
+
+<span class="c1"># Our app is ready, let's go!
+</span><span class="n">window</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>You should see a window appear with a horizonal bar plot. The plot shows the percentage of paragraphs written by each of the three Bronte sisters that mention some form of “tea.” We can see that Emily mentions “tea” (as I defined it in my scraping logic) most frequently. I know that Charlotte mentioned tea the most, but she also wrote more than her sisters overall, so taking the average cancelled that out a bit.</p>
+
+<p>On Repl.it you might get a “Matplotlib created a temporary config/cache” error message, but that is normal, just ignore those.</p>
+
+<p>If you have some other error message, it may be because one or both of your data files are not next to your python code. If not that, it could be because one of your files is not named <em>exactly</em> the same as the python code expects it to be. And if not that, it could be that you did not download the files by right-click/save-as exactly as instructed above: If you instead left-clicked on the CSV file link and it opened in your computer’s spreadsheet editor, then when you saved it from there, your editor could have changed the formatting from what the code above expected. (These were the common headaches I’ve seen at this point in the past.)</p>
+
+<p><strong>SUBMISSION #1</strong> Once you have this step working, take a screenshot showing me your code and your results and embed that as the first part of your answer to this activity.</p>
+
+<p>5) Fifth, modify the code to show mentions of some form of “crying.” Do this by changing <code class="language-plaintext highlighter-rouge">y="TEA"</code> to <code class="language-plaintext highlighter-rouge">y="CRY"</code> around line 38.</p>
+
+<p><strong>SUBMISSION #2</strong> Once you have that working, take and embed another screenshot showing me the updated code and result.</p>
+
+<p>6) Sixth, modify the code to show TEA and CRY at the same time. Do this by changing <code class="language-plaintext highlighter-rouge">y="CRY"</code> to <code class="language-plaintext highlighter-rouge">y=["TEA", "CRY"]</code>.</p>
+
+<p><strong>SUBMISSION #3</strong> Embed another screenshot of the updated code and results.</p>
+
+<p>7) Seventh, take a look at the contents of the two files I asked you to download. Give a brief, precise, and accurate statement describing the overall structure and content of each file. What kind of information is in it? How is that information structured, organized, formatted? If you were to change these files, what effects do you think it would have on your results (assuming you don’t cause an error)?</p>
+
+<p>8) Finally, interpret your results. Do you believe this data we’ve collected about these three authors tells us anything interesting about their writing? Why or why not? What are the limitations of just looking at plots? What other ideas for your app can you think of that would make it more interactive for helping the user understand the differences between the authors, answering questions the user might have about the texts, etc.?</p>
+
+<p><strong>SUBMISSION #4</strong>  Answer the above questions in 7 &amp; 8.</p>
+
+<h2 id="optional-fun-exercise">Optional Fun Exercise</h2>
+
+<p>This is completely optional, not worth extra credit or anything, just a fun warm up. I do encourage you to, as you best see fit, try basing a few Tinker journals on these optional exercises though.</p>
+
+<p>Start a new python project on Repl.it with this code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Load...
+</span><span class="kn">from</span> <span class="n">turtle</span> <span class="kn">import</span> <span class="n">Turtle</span>
+
+<span class="c1"># Initialize...
+</span><span class="n">tim</span> <span class="o">=</span> <span class="nc">Turtle</span><span class="p">()</span>
+
+<span class="c1"># Draw!
+</span><span class="n">tim</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">tim</span><span class="p">.</span><span class="nf">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">tim</span><span class="p">.</span><span class="nf">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Add to and modify the code (trial and error) to make these shapes:</p>
+
+<ul>
+  <li>a square</li>
+  <li>a rectangle</li>
+  <li>a triangle (any kind)</li>
+  <li>a house</li>
+  <li>a five-point star</li>
+</ul>
+
+<p>Embed screenshots showing me your art!</p>
+
+<hr />
+
+<h2 id="submission">Submission</h2>
+
+<p>Complete Guided Exercise and put <strong><em>all screenshots</em></strong> in a single Word document, then submit your document as a Word or PDF file to Blackboard.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>Each Lab is worth 8/500 (1.6%) towards your final grade.</p>
+
+<p>8/8 - Great job, maximum points! The student completes the Lab accurately and sufficiently and honestly, demonstrating the best of their ability.</p>
+
+<p>6/8 - Student completes most but not all of the Lab. Or, student completes the Lab, but only to the minimal letter of the prompt, not actually applying the concepts of the unit. If you encounter problems or have questions, be sure to email me well before 24 hours before the due date, then continue to attempt to resolve the issue on your own while you wait for a reply.</p>
+
+<p>2/8 - Student completes less than half of the Lab with sufficient work, or student leaves entire sections blank. Make sure that you are leaving yourself enough time to complete assignments, as usually students submit incomplete work because they were rushed at the last minute.</p>
+
+<p>0/8 - Student does not submit on time or submits plagiarized or unacceptable work. Double check that you have submitted the right file, as usually students get zeros because they submitted a previous week’s work by accident.</p>
+
+<h2 id="tips">Tips</h2>
+
+<p><strong>How Do I Take a Screenshot?</strong></p>
+
+<p>In Windows: Open your Start menu and search for the Snipping Tool. Use that.</p>
+
+<p>In Mac: Cmd+Ctl+Shift+4, then Cmd+V into your Word document</p>
+
+<p>In Linux: If you have a GNOME shell, I recommend the <a href="https://extensions.gnome.org/extension/1112/screenshot-tool/">Screenshot Tool</a> extension.</p>
+
+<p>On a Chromebook: I recommend the <a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl">Full Page Screen Capture</a> extension.</p>
+
+<p><strong>How Do I read an Integer from the Keyboard?</strong></p>
+
+<p>I recommend reading <a href="https://pythonexamples.org/python-read-number-from-console/">https://pythonexamples.org/python-read-number-from-console/</a></p>
+
+<p><strong>How do I Display Values inside a Message?</strong></p>
+
+<p>I recommend reading about f-strings from <a href="https://realpython.com/python-f-strings/">https://realpython.com/python-f-strings/</a></p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

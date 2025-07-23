@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio 2 | CIT 144: Python I</title>
+
+  <!-- Main Custom CSS -->
+  <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <h1>CIT 144: Python I</h1>
+  </header>
+
+  <!-- Main Container (Sidebar + Content) -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="menu-toggle" onclick="toggleSidebar()">☰ Menu</div>
+      <nav class="sidebar-nav">
+  <h2 class="sidebar-title">CIT 144: Python I</h2>
+  <ul class="sidebar-list">
+    <li><a href="/">Home</a></li>
+
+    <!-- Unit 1 -->
+    <li class="has-submenu open">
+      <span class="toggle">Unit 1 – Introduction</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 1</span>
+          <ul class="submenu">
+            <li><a href="/journal01/">Reading / Journal 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 2</span>
+          <ul class="submenu">
+            <li><a href="/journal02/">Reading / Journal 2</a></li>
+            <li><a href="/lab1/">Lab 1</a></li>
+            <li><a href="/checkin1/">Project Check-in 1</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 3</span>
+          <ul class="submenu">
+            <li><a href="/journal03/">Reading / Journal 3</a></li>
+            <li><a href="/studio1/">Studio 1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 2 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 2 – Fundamental Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 4</span>
+          <ul class="submenu">
+            <li><a href="/journal04/">Reading / Journal 4</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 5</span>
+          <ul class="submenu">
+            <li><a href="/journal05/">Reading / Journal 5</a></li>
+            <li><a href="/lab2/">Lab 2</a></li>
+            <li><a href="/checkin2/">Project Check-in 2</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 6</span>
+          <ul class="submenu">
+            <li><a href="/journal06/">Reading / Journal 6</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 7</span>
+          <ul class="submenu">
+            <li><a href="/journal07/">Reading / Journal 7</a></li>
+            <li><a href="/lab3/">Lab 3</a></li>
+            <li><a href="/checkin3/">Project Check-in 3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 3 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 3 – Continuing to Build Skills</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 8</span>
+          <ul class="submenu">
+            <li><a href="/journal08/">Reading / Journal 8</a></li>
+            <li><a href="/studio2/">Studio 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/break/">Break</a></li>
+        <li class="has-submenu">
+          <span class="toggle">Week 9</span>
+          <ul class="submenu">
+            <li><a href="/journal09/">Reading / Journal 9</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 10</span>
+          <ul class="submenu">
+            <li><a href="/journal10/">Reading / Journal 10</a></li>
+            <li><a href="/lab4/">Lab 4</a></li>
+            <li><a href="/checkin4/">Project Check-in 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 4 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 4 – Like a Final Draft</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 11</span>
+          <ul class="submenu">
+            <li><a href="/journal11/">Reading / Journal 11</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 12</span>
+          <ul class="submenu">
+            <li><a href="/journal12/">Reading / Journal 12</a></li>
+            <li><a href="/lab5/">Lab 5</a></li>
+            <li><a href="/checkin5/">Project Check-in 5</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 13</span>
+          <ul class="submenu">
+            <li><a href="/journal13/">Reading / Journal 13</a></li>
+            <li><a href="/peerreview/">Peer Review Instructions 🤝</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Unit 5 -->
+    <li class="has-submenu">
+      <span class="toggle">Unit 5 – Wrap Up!</span>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <span class="toggle">Week 14</span>
+          <ul class="submenu">
+            <li><a href="/journal14/">Reading / Journal 14</a></li>
+            <li><a href="/studio3/">Studio 3</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Week 15</span>
+          <ul class="submenu">
+            <li><a href="/journal15/">Reading / Journal 15</a></li>
+            <li><a href="/project/">Project Final Draft ☑️</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <span class="toggle">Finals</span>
+          <ul class="submenu">
+            <li><a href="/tutorial/">Final Assignment</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <!-- Page Content -->
+    <main class="content">
+      <h1 id="studio-2-unedited">Studio 2 (unedited)</h1>
+
+<h2 id="using-collections-">Using Collections 🎭</h2>
+
+<p>Studios are based on the idea of learning how to code by watching successful coders code. Each Studio is worth 4/100 towards your final grade.</p>
+
+<p>In this assignment you will watch two videos on this week’s topic; then you will record a meeting with your Studio Group to discuss; then you will respond with a comment on another group’s recording.</p>
+
+<p>Recordings are due on a Friday, responses are due on a Sunday.</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>First, as soon as possible, agree on a time with your Studio Group to meet virtually. Schedule this meeting on Microsoft Teams.</p>
+
+<p>Second, watch these two videos:</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=R-HLU9Fl5ug">https://www.youtube.com/watch?v=R-HLU9Fl5ug</a></li>
+  <li><a href="https://www.youtube.com/watch?v=daefaLgNkw0">https://www.youtube.com/watch?v=daefaLgNkw0</a></li>
+</ul>
+
+<p>As you watch, jot down techincal terms, or questions you have, that the video does not define/answer for you.</p>
+
+<p>Third, pick four of the terms/questions you jotted down (two for each video). Search online for answers, and remember where you found your answers so you can cite them later.</p>
+
+<p>Fourth, meet with your group on Microsoft Teams. Elect someone to lead, keep the overall meeting less than 30 minutes, everyone should answer every question, everyone has two minutes to speak before someone else should have a turn, and keep your video and audio on as much as possible.</p>
+
+<p>Fifth, turn on recording, then discuss the questions below. You will submit a copy of this recording when you are done.</p>
+
+<p>Finally, after all groups submit, watch another group’s discussion and respond with a polite and meaningful comment.</p>
+
+<h2 id="questions-for-discussion">Questions for Discussion</h2>
+
+<ol>
+  <li>Names? It’s a <em>lot</em> easier to make sure everyone gets their points if the recording starts with a quick round of names.</li>
+  <li>In each video, was the speaker clear? Was the sound and video quality clear? Was the delivery professional? How would you rate the final product/message of the video? Good? Bad? Amazing? Needs Improvement? Just “Meh”? Why do you say so, what was good / what could be better?</li>
+  <li>In each video, do you believe the speaker provided sufficient background information/links to the tools/data/research they used? What were these? Which were missing? Why do you say so, what was good / what could be better?</li>
+  <li>In each video, what course concepts did the speaker demonstrate? How were these used successfully or unsuccessfully to accomplish the goal the speaker had? Give specific examples from what you remember.</li>
+  <li>What terms/questions did you research? What answers did you find? Share your citation links with the leader so they can submit them later.</li>
+  <li>Next, everyone share your current ideas about your project, ask each other for feedback, and help each other flesh out their ideas. It’s good to point to specific content you have from Check-in 2/3.</li>
+  <li>Finally, what skills, techniques, tools, lines of thinking, designs, etc. from all of this Studio’s videos and discussion would you like to “steal” for your own work?</li>
+</ol>
+
+<h2 id="submission">Submission</h2>
+
+<p>Only the team leader needs to submit the recording. Download your group’s recording from Microsoft Streams, then upload your video to a new thread on the Studio 2 discussion board.</p>
+
+<p>In your discussion board post include links to the pages cited by your team.</p>
+
+<h2 id="grading">Grading</h2>
+
+<p>4/4 - Discussion recording was submitted on Friday or sooner, discussion covered all required topics while leaving room for new ideas, you contributed equally with the other members of your group, and you responded with a meaningful comment to at least one other group</p>
+
+<p>3/4 - Discussion recording was submitted on Friday or sooner, but the discussion was lacking, or you contributed only the bare minimum in your group’s discussion, or you responded with the bare minimum to one other group</p>
+
+<p>1/4 - Discussion recording was submitted after Friday, or you did not contribute at all in your group, or you did not respond at all to one other group</p>
+
+<p>0/4 - No submission</p>
+
+
+      <!-- Previous/Next Navigation -->
+      
+
+
+
+
+
+
+
+
+<nav class="docs-footer">
+  
+    
+    <a class="docs-footer-prevpage" href="">
+      « Previous Page
+    </a>
+  
+
+  
+    
+    <a class="docs-footer-nextpage" href="">
+      Next Page »
+    </a>
+  
+</nav>
+
+    </main>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Phillip Woosley</p>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/assets/sidebar.js"></script>
+  <script src="/assets/copy-code.js"></script>
+  <script src="/assets/menu.js"></script>
+</body>
+</html>

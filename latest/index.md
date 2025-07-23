@@ -4,7 +4,7 @@ title: Home
 nav_order: 0
 ---
 
-# CIT 144: Python I
+# CIT 144: Python I (DRAFT)
 Welcome in!
 
 On this site I'll post lessons and assignments for our class. I do this because I share a lot of code examples, and they'll look a *lot* better this way than on BlackBoard. You'll still *submit* work through BlackBoard.
